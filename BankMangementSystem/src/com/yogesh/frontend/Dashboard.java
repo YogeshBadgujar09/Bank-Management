@@ -311,16 +311,134 @@ public class Dashboard extends javax.swing.JFrame {
         lblTransactionHeading = new javax.swing.JLabel();
         pnlTransactionMenu = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        lblDepositeMouseClick = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        lblWithdrawMouseClick = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
+        lblTransferMoneyMouseClick = new javax.swing.JLabel();
         jPanel15 = new javax.swing.JPanel();
+        lblStatementMouseClick = new javax.swing.JLabel();
+        tabTransactionPanel = new javax.swing.JTabbedPane();
+        pnlDeposite = new javax.swing.JPanel();
+        pnlDepositeLable = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        txtDepositeAccountNumber = new javax.swing.JTextField();
+        btnDepositeAccountNo = new javax.swing.JButton();
+        btnDepositeSearchClear = new javax.swing.JButton();
+        pnlConfirmDepositeDetail = new javax.swing.JPanel();
+        jPanel16 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
-        scrollPaneTransaction = new javax.swing.JScrollPane();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jScrollPane3 = new javax.swing.JScrollPane();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        btnDepositeConfirmAccount = new javax.swing.JButton();
+        btnDepositeConfirmCancel = new javax.swing.JButton();
+        lblDepositeSetAccountHolderName = new javax.swing.JLabel();
+        lblDepositeSetAadharNo = new javax.swing.JLabel();
+        lblDepositeSetMobileNo = new javax.swing.JLabel();
+        lblDepositeSetBalance = new javax.swing.JLabel();
+        jPanel17 = new javax.swing.JPanel();
+        jPanel18 = new javax.swing.JPanel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        txtDepositeAmount = new javax.swing.JTextField();
+        btnDepositeAmount = new javax.swing.JButton();
+        btnDepositeAmountCancel = new javax.swing.JButton();
+        pnlWithdraw = new javax.swing.JPanel();
+        jPanel19 = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        lblAccountNumber = new javax.swing.JLabel();
+        txtWithdrawAccountNumber = new javax.swing.JTextField();
+        btnWithdrawAccountNo = new javax.swing.JButton();
+        btnWithdrawSearchClear = new javax.swing.JButton();
+        pnlConfirmDepositeDetail1 = new javax.swing.JPanel();
+        jPanel20 = new javax.swing.JPanel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        btnWithdrawConfirmAccount = new javax.swing.JButton();
+        btnWithdrawConfirmCancel = new javax.swing.JButton();
+        lblWithdrawSetAccountHolderName = new javax.swing.JLabel();
+        lblWithdrawSetAadharNo = new javax.swing.JLabel();
+        lblWithdrawSetMobileNo = new javax.swing.JLabel();
+        lblWithdrawSetBalance = new javax.swing.JLabel();
+        jPanel21 = new javax.swing.JPanel();
+        jPanel22 = new javax.swing.JPanel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        txtWithdrawAmount = new javax.swing.JTextField();
+        btnWithdrawAmount = new javax.swing.JButton();
+        btnWithdrawAmountCancel = new javax.swing.JButton();
+        pnlTranferMoney = new javax.swing.JPanel();
+        jPanel23 = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
+        txtWithdrawAccountNumber1 = new javax.swing.JTextField();
+        lblAccountNumber1 = new javax.swing.JLabel();
+        btnWithdrawAccountNo1 = new javax.swing.JButton();
+        btnWithdrawSearchClear1 = new javax.swing.JButton();
+        pnlConfirmDepositeDetail2 = new javax.swing.JPanel();
+        jPanel24 = new javax.swing.JPanel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
+        btnWithdrawConfirmAccount1 = new javax.swing.JButton();
+        btnWithdrawConfirmCancel1 = new javax.swing.JButton();
+        lblWithdrawSetAccountHolderName1 = new javax.swing.JLabel();
+        lblWithdrawSetAadharNo1 = new javax.swing.JLabel();
+        lblWithdrawSetMobileNo1 = new javax.swing.JLabel();
+        lblWithdrawSetBalance1 = new javax.swing.JLabel();
+        jPanel25 = new javax.swing.JPanel();
+        lblAccountNumber2 = new javax.swing.JLabel();
+        txtWithdrawAccountNumber2 = new javax.swing.JTextField();
+        btnWithdrawAccountNo2 = new javax.swing.JButton();
+        btnWithdrawSearchClear2 = new javax.swing.JButton();
+        pnlConfirmDepositeDetail3 = new javax.swing.JPanel();
+        jPanel26 = new javax.swing.JPanel();
+        jLabel63 = new javax.swing.JLabel();
+        jLabel64 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        btnWithdrawConfirmAccount2 = new javax.swing.JButton();
+        btnWithdrawConfirmCancel2 = new javax.swing.JButton();
+        lblWithdrawSetAccountHolderName2 = new javax.swing.JLabel();
+        lblWithdrawSetAadharNo2 = new javax.swing.JLabel();
+        lblWithdrawSetMobileNo2 = new javax.swing.JLabel();
+        lblWithdrawSetBalance2 = new javax.swing.JLabel();
+        jPanel29 = new javax.swing.JPanel();
+        jPanel30 = new javax.swing.JPanel();
+        jLabel69 = new javax.swing.JLabel();
+        jLabel70 = new javax.swing.JLabel();
+        txtWithdrawAmount1 = new javax.swing.JTextField();
+        btnWithdrawAmount1 = new javax.swing.JButton();
+        btnWithdrawAmountCancel1 = new javax.swing.JButton();
+        pnlStatement = new javax.swing.JPanel();
+        jPanel31 = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        txtDepositeAccountNumber1 = new javax.swing.JTextField();
+        btnDepositeAccountNo1 = new javax.swing.JButton();
+        btnDepositeSearchClear1 = new javax.swing.JButton();
+        pnlTransactionHistory = new javax.swing.JPanel();
+        jPanel33 = new javax.swing.JPanel();
+        jLabel71 = new javax.swing.JLabel();
+        jLabel72 = new javax.swing.JLabel();
+        jLabel73 = new javax.swing.JLabel();
+        lblWithdrawSetAadharNo3 = new javax.swing.JLabel();
+        lblWithdrawSetAccountHolderName3 = new javax.swing.JLabel();
+        jLabel74 = new javax.swing.JLabel();
+        lblWithdrawSetMobileNo3 = new javax.swing.JLabel();
+        lblWithdrawSetBalance3 = new javax.swing.JLabel();
+        jLabel75 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tableTransaction = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
 
         jLabel1.setBackground(new java.awt.Color(0, 102, 102));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -611,7 +729,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(pnCarLoan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jpnAttention, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 442, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 485, Short.MAX_VALUE)
                 .addComponent(jpnFooter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -623,7 +741,7 @@ public class Dashboard extends javax.swing.JFrame {
         pnlHomeLayout.setHorizontalGroup(
             pnlHomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlHomeLayout.createSequentialGroup()
-                .addComponent(spHomePage, javax.swing.GroupLayout.DEFAULT_SIZE, 1280, Short.MAX_VALUE)
+                .addComponent(spHomePage, javax.swing.GroupLayout.DEFAULT_SIZE, 1268, Short.MAX_VALUE)
                 .addContainerGap())
         );
         pnlHomeLayout.setVerticalGroup(
@@ -2350,7 +2468,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(pnlAccountMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(tabCustomAccountManage, javax.swing.GroupLayout.PREFERRED_SIZE, 1141, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 46, Short.MAX_VALUE))
+                .addGap(0, 83, Short.MAX_VALUE))
         );
 
         scrollpaneAccountMain.setViewportView(pnlAccountMain);
@@ -2361,7 +2479,7 @@ public class Dashboard extends javax.swing.JFrame {
             pnlAccountsMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlAccountsMainLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(scrollpaneAccountMain, javax.swing.GroupLayout.DEFAULT_SIZE, 1280, Short.MAX_VALUE))
+                .addComponent(scrollpaneAccountMain, javax.swing.GroupLayout.DEFAULT_SIZE, 1268, Short.MAX_VALUE))
         );
         pnlAccountsMainLayout.setVerticalGroup(
             pnlAccountsMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2369,6 +2487,10 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         tabCustomMenu.addTab("ACCOUNT", pnlAccountsMain);
+
+        scrollPanelTransaction.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+        pnlTranscation.setBackground(new java.awt.Color(255, 255, 255));
 
         pnlHeadingTransaction.setBackground(new java.awt.Color(0, 102, 102));
 
@@ -2398,11 +2520,16 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel10.setBackground(new java.awt.Color(0, 102, 102));
 
-        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("DEPOSITE");
+        lblDepositeMouseClick.setBackground(new java.awt.Color(255, 255, 255));
+        lblDepositeMouseClick.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblDepositeMouseClick.setForeground(new java.awt.Color(255, 255, 255));
+        lblDepositeMouseClick.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDepositeMouseClick.setText("DEPOSITE");
+        lblDepositeMouseClick.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblDepositeMouseClickMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -2410,24 +2537,29 @@ public class Dashboard extends javax.swing.JFrame {
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblDepositeMouseClick, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                .addComponent(lblDepositeMouseClick, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         jPanel13.setBackground(new java.awt.Color(0, 102, 102));
 
-        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("WITHDRAW");
+        lblWithdrawMouseClick.setBackground(new java.awt.Color(255, 255, 255));
+        lblWithdrawMouseClick.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblWithdrawMouseClick.setForeground(new java.awt.Color(255, 255, 255));
+        lblWithdrawMouseClick.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblWithdrawMouseClick.setText("WITHDRAW");
+        lblWithdrawMouseClick.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblWithdrawMouseClickMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -2435,24 +2567,29 @@ public class Dashboard extends javax.swing.JFrame {
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblWithdrawMouseClick, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                .addComponent(lblWithdrawMouseClick, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         jPanel14.setBackground(new java.awt.Color(0, 102, 102));
 
-        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("TRANSFER MONEY");
+        lblTransferMoneyMouseClick.setBackground(new java.awt.Color(255, 255, 255));
+        lblTransferMoneyMouseClick.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblTransferMoneyMouseClick.setForeground(new java.awt.Color(255, 255, 255));
+        lblTransferMoneyMouseClick.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTransferMoneyMouseClick.setText("TRANSFER MONEY");
+        lblTransferMoneyMouseClick.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblTransferMoneyMouseClickMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -2460,24 +2597,29 @@ public class Dashboard extends javax.swing.JFrame {
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
+                .addComponent(lblTransferMoneyMouseClick, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                .addComponent(lblTransferMoneyMouseClick, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         jPanel15.setBackground(new java.awt.Color(0, 102, 102));
 
-        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("STATEMENT");
+        lblStatementMouseClick.setBackground(new java.awt.Color(255, 255, 255));
+        lblStatementMouseClick.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblStatementMouseClick.setForeground(new java.awt.Color(255, 255, 255));
+        lblStatementMouseClick.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblStatementMouseClick.setText("STATEMENT");
+        lblStatementMouseClick.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblStatementMouseClickMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
@@ -2485,14 +2627,14 @@ public class Dashboard extends javax.swing.JFrame {
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblStatementMouseClick, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                .addComponent(lblStatementMouseClick, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -2516,46 +2658,1148 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(397, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        pnlDepositeLable.setBackground(new java.awt.Color(255, 102, 0));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("DEPOSITE ");
+
+        javax.swing.GroupLayout pnlDepositeLableLayout = new javax.swing.GroupLayout(pnlDepositeLable);
+        pnlDepositeLable.setLayout(pnlDepositeLableLayout);
+        pnlDepositeLableLayout.setHorizontalGroup(
+            pnlDepositeLableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDepositeLableLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        pnlDepositeLableLayout.setVerticalGroup(
+            pnlDepositeLableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDepositeLableLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jLabel5.setText("ACCOUNT NUMBER ");
+
+        btnDepositeAccountNo.setBackground(new java.awt.Color(0, 102, 102));
+        btnDepositeAccountNo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnDepositeAccountNo.setForeground(new java.awt.Color(255, 255, 255));
+        btnDepositeAccountNo.setText("SEARCH A/C");
+
+        btnDepositeSearchClear.setBackground(new java.awt.Color(0, 102, 102));
+        btnDepositeSearchClear.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnDepositeSearchClear.setForeground(new java.awt.Color(255, 255, 255));
+        btnDepositeSearchClear.setText("CLEAR");
+
+        pnlConfirmDepositeDetail.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel16.setBackground(new java.awt.Color(0, 102, 102));
+
+        jLabel6.setBackground(new java.awt.Color(0, 102, 102));
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("CONFIRM ACCOUNT DETAILS");
+
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel16Layout.createSequentialGroup()
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jLabel7.setText("ACCOUNT HOLDER      :");
+
+        jLabel27.setText("AADHAR NUMBER        :");
+
+        jLabel45.setText("MOBILE NUMBER     :");
+
+        jLabel46.setText("BALANCE                   :");
+
+        btnDepositeConfirmAccount.setBackground(new java.awt.Color(0, 102, 102));
+        btnDepositeConfirmAccount.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnDepositeConfirmAccount.setForeground(new java.awt.Color(255, 255, 255));
+        btnDepositeConfirmAccount.setText("CONFIRM A/C");
+
+        btnDepositeConfirmCancel.setBackground(new java.awt.Color(0, 102, 102));
+        btnDepositeConfirmCancel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnDepositeConfirmCancel.setForeground(new java.awt.Color(255, 255, 255));
+        btnDepositeConfirmCancel.setText("CANCEL");
+
+        lblDepositeSetAccountHolderName.setText("jLabel47");
+
+        lblDepositeSetAadharNo.setText("jLabel47");
+
+        lblDepositeSetMobileNo.setText("jLabel47");
+
+        lblDepositeSetBalance.setText("jLabel47");
+
+        javax.swing.GroupLayout pnlConfirmDepositeDetailLayout = new javax.swing.GroupLayout(pnlConfirmDepositeDetail);
+        pnlConfirmDepositeDetail.setLayout(pnlConfirmDepositeDetailLayout);
+        pnlConfirmDepositeDetailLayout.setHorizontalGroup(
+            pnlConfirmDepositeDetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pnlConfirmDepositeDetailLayout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addGroup(pnlConfirmDepositeDetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlConfirmDepositeDetailLayout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblDepositeSetAccountHolderName, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlConfirmDepositeDetailLayout.createSequentialGroup()
+                        .addComponent(jLabel27)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblDepositeSetAadharNo, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(129, 129, 129)
+                .addGroup(pnlConfirmDepositeDetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlConfirmDepositeDetailLayout.createSequentialGroup()
+                        .addComponent(jLabel45)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblDepositeSetMobileNo, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlConfirmDepositeDetailLayout.createSequentialGroup()
+                        .addComponent(jLabel46)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblDepositeSetBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(244, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlConfirmDepositeDetailLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnDepositeConfirmAccount)
+                .addGap(45, 45, 45)
+                .addComponent(btnDepositeConfirmCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(518, 518, 518))
+        );
+        pnlConfirmDepositeDetailLayout.setVerticalGroup(
+            pnlConfirmDepositeDetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlConfirmDepositeDetailLayout.createSequentialGroup()
+                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addGroup(pnlConfirmDepositeDetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel45)
+                    .addComponent(jLabel7)
+                    .addComponent(lblDepositeSetAccountHolderName)
+                    .addComponent(lblDepositeSetMobileNo))
+                .addGap(18, 18, 18)
+                .addGroup(pnlConfirmDepositeDetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel27)
+                    .addComponent(jLabel46)
+                    .addComponent(lblDepositeSetAadharNo)
+                    .addComponent(lblDepositeSetBalance))
+                .addGap(51, 51, 51)
+                .addGroup(pnlConfirmDepositeDetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnDepositeConfirmCancel)
+                    .addComponent(btnDepositeConfirmAccount))
+                .addGap(37, 37, 37))
+        );
+
+        jPanel17.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel18.setBackground(new java.awt.Color(0, 102, 102));
+
+        jLabel51.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel51.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel51.setText("DEPOSITE AMOUNT");
+
+        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
+        jPanel18.setLayout(jPanel18Layout);
+        jPanel18Layout.setHorizontalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel51, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel18Layout.setVerticalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel51, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jLabel52.setText("ENTER AMOUNT :");
+
+        btnDepositeAmount.setBackground(new java.awt.Color(0, 102, 102));
+        btnDepositeAmount.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnDepositeAmount.setForeground(new java.awt.Color(255, 255, 255));
+        btnDepositeAmount.setText("DEPOSITE");
+
+        btnDepositeAmountCancel.setBackground(new java.awt.Color(0, 102, 102));
+        btnDepositeAmountCancel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnDepositeAmountCancel.setForeground(new java.awt.Color(255, 255, 255));
+        btnDepositeAmountCancel.setText("CANCEL");
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addGap(154, 154, 154)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addComponent(txtDepositeAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(119, 119, 119)
+                        .addComponent(btnDepositeAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44)
+                        .addComponent(btnDepositeAmountCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
+                .addComponent(jLabel52)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDepositeAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDepositeAmount)
+                    .addComponent(btnDepositeAmountCancel))
+                .addGap(0, 81, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pnlDepositeLayout = new javax.swing.GroupLayout(pnlDeposite);
+        pnlDeposite.setLayout(pnlDepositeLayout);
+        pnlDepositeLayout.setHorizontalGroup(
+            pnlDepositeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlDepositeLable, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlConfirmDepositeDetail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pnlDepositeLayout.createSequentialGroup()
+                .addGap(191, 191, 191)
+                .addGroup(pnlDepositeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlDepositeLayout.createSequentialGroup()
+                        .addComponent(txtDepositeAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(119, 119, 119)
+                        .addComponent(btnDepositeAccountNo, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(btnDepositeSearchClear, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        pnlDepositeLayout.setVerticalGroup(
+            pnlDepositeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDepositeLayout.createSequentialGroup()
+                .addComponent(pnlDepositeLable, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlDepositeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDepositeAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDepositeAccountNo)
+                    .addComponent(btnDepositeSearchClear))
+                .addGap(66, 66, 66)
+                .addComponent(pnlConfirmDepositeDetail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 635, Short.MAX_VALUE))
+        );
+
+        tabTransactionPanel.addTab("tab1", pnlDeposite);
+
+        jPanel19.setBackground(new java.awt.Color(255, 102, 0));
+
+        jLabel24.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel24.setText("WITHDRAW");
+
+        javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
+        jPanel19.setLayout(jPanel19Layout);
+        jPanel19Layout.setHorizontalGroup(
+            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel19Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel19Layout.setVerticalGroup(
+            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel19Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        lblAccountNumber.setText("ACCOUNT NUMBER ");
+
+        btnWithdrawAccountNo.setBackground(new java.awt.Color(0, 102, 102));
+        btnWithdrawAccountNo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnWithdrawAccountNo.setForeground(new java.awt.Color(255, 255, 255));
+        btnWithdrawAccountNo.setText("SEARCH A/C");
+
+        btnWithdrawSearchClear.setBackground(new java.awt.Color(0, 102, 102));
+        btnWithdrawSearchClear.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnWithdrawSearchClear.setForeground(new java.awt.Color(255, 255, 255));
+        btnWithdrawSearchClear.setText("CLEAR");
+
+        pnlConfirmDepositeDetail1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel20.setBackground(new java.awt.Color(0, 102, 102));
+
+        jLabel48.setBackground(new java.awt.Color(0, 102, 102));
+        jLabel48.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel48.setText("CONFIRM ACCOUNT DETAILS");
+
+        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
+        jPanel20.setLayout(jPanel20Layout);
+        jPanel20Layout.setHorizontalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel20Layout.setVerticalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jLabel49.setText("ACCOUNT HOLDER      :");
+
+        jLabel50.setText("AADHAR NUMBER        :");
+
+        jLabel53.setText("MOBILE NUMBER     :");
+
+        jLabel55.setText("BALANCE                   :");
+
+        btnWithdrawConfirmAccount.setBackground(new java.awt.Color(0, 102, 102));
+        btnWithdrawConfirmAccount.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnWithdrawConfirmAccount.setForeground(new java.awt.Color(255, 255, 255));
+        btnWithdrawConfirmAccount.setText("CONFIRM A/C");
+
+        btnWithdrawConfirmCancel.setBackground(new java.awt.Color(0, 102, 102));
+        btnWithdrawConfirmCancel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnWithdrawConfirmCancel.setForeground(new java.awt.Color(255, 255, 255));
+        btnWithdrawConfirmCancel.setText("CANCEL");
+
+        lblWithdrawSetAccountHolderName.setText("jLabel47");
+
+        lblWithdrawSetAadharNo.setText("jLabel47");
+
+        lblWithdrawSetMobileNo.setText("jLabel47");
+
+        lblWithdrawSetBalance.setText("jLabel47");
+
+        javax.swing.GroupLayout pnlConfirmDepositeDetail1Layout = new javax.swing.GroupLayout(pnlConfirmDepositeDetail1);
+        pnlConfirmDepositeDetail1.setLayout(pnlConfirmDepositeDetail1Layout);
+        pnlConfirmDepositeDetail1Layout.setHorizontalGroup(
+            pnlConfirmDepositeDetail1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pnlConfirmDepositeDetail1Layout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addGroup(pnlConfirmDepositeDetail1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlConfirmDepositeDetail1Layout.createSequentialGroup()
+                        .addComponent(jLabel49)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblWithdrawSetAccountHolderName, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlConfirmDepositeDetail1Layout.createSequentialGroup()
+                        .addComponent(jLabel50)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblWithdrawSetAadharNo, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(129, 129, 129)
+                .addGroup(pnlConfirmDepositeDetail1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlConfirmDepositeDetail1Layout.createSequentialGroup()
+                        .addComponent(jLabel53)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblWithdrawSetMobileNo, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlConfirmDepositeDetail1Layout.createSequentialGroup()
+                        .addComponent(jLabel55)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblWithdrawSetBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(244, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlConfirmDepositeDetail1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnWithdrawConfirmAccount)
+                .addGap(45, 45, 45)
+                .addComponent(btnWithdrawConfirmCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(518, 518, 518))
+        );
+        pnlConfirmDepositeDetail1Layout.setVerticalGroup(
+            pnlConfirmDepositeDetail1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlConfirmDepositeDetail1Layout.createSequentialGroup()
+                .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addGroup(pnlConfirmDepositeDetail1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel53)
+                    .addComponent(jLabel49)
+                    .addComponent(lblWithdrawSetAccountHolderName)
+                    .addComponent(lblWithdrawSetMobileNo))
+                .addGap(18, 18, 18)
+                .addGroup(pnlConfirmDepositeDetail1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel50)
+                    .addComponent(jLabel55)
+                    .addComponent(lblWithdrawSetAadharNo)
+                    .addComponent(lblWithdrawSetBalance))
+                .addGap(51, 51, 51)
+                .addGroup(pnlConfirmDepositeDetail1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnWithdrawConfirmCancel)
+                    .addComponent(btnWithdrawConfirmAccount))
+                .addGap(37, 37, 37))
+        );
+
+        jPanel21.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel22.setBackground(new java.awt.Color(0, 102, 102));
+
+        jLabel56.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel56.setText("WITHDRAW AMOUNT");
+
+        javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
+        jPanel22.setLayout(jPanel22Layout);
+        jPanel22Layout.setHorizontalGroup(
+            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel22Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel56, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel22Layout.setVerticalGroup(
+            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel22Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel56, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jLabel57.setText("ENTER AMOUNT :");
+
+        btnWithdrawAmount.setBackground(new java.awt.Color(0, 102, 102));
+        btnWithdrawAmount.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnWithdrawAmount.setForeground(new java.awt.Color(255, 255, 255));
+        btnWithdrawAmount.setText("WITHDRAW");
+
+        btnWithdrawAmountCancel.setBackground(new java.awt.Color(0, 102, 102));
+        btnWithdrawAmountCancel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnWithdrawAmountCancel.setForeground(new java.awt.Color(255, 255, 255));
+        btnWithdrawAmountCancel.setText("CANCEL");
+
+        javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
+        jPanel21.setLayout(jPanel21Layout);
+        jPanel21Layout.setHorizontalGroup(
+            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel21Layout.createSequentialGroup()
+                .addGap(154, 154, 154)
+                .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel21Layout.createSequentialGroup()
+                        .addComponent(txtWithdrawAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(119, 119, 119)
+                        .addComponent(btnWithdrawAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44)
+                        .addComponent(btnWithdrawAmountCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel21Layout.setVerticalGroup(
+            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel21Layout.createSequentialGroup()
+                .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
+                .addComponent(jLabel57)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtWithdrawAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnWithdrawAmount)
+                    .addComponent(btnWithdrawAmountCancel))
+                .addGap(0, 81, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pnlWithdrawLayout = new javax.swing.GroupLayout(pnlWithdraw);
+        pnlWithdraw.setLayout(pnlWithdrawLayout);
+        pnlWithdrawLayout.setHorizontalGroup(
+            pnlWithdrawLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pnlWithdrawLayout.createSequentialGroup()
+                .addGap(191, 191, 191)
+                .addGroup(pnlWithdrawLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlWithdrawLayout.createSequentialGroup()
+                        .addComponent(txtWithdrawAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(119, 119, 119)
+                        .addComponent(btnWithdrawAccountNo, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(btnWithdrawSearchClear, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(pnlConfirmDepositeDetail1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        pnlWithdrawLayout.setVerticalGroup(
+            pnlWithdrawLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlWithdrawLayout.createSequentialGroup()
+                .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addComponent(lblAccountNumber)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlWithdrawLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtWithdrawAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnWithdrawAccountNo)
+                    .addComponent(btnWithdrawSearchClear))
+                .addGap(66, 66, 66)
+                .addComponent(pnlConfirmDepositeDetail1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(634, Short.MAX_VALUE))
+        );
+
+        tabTransactionPanel.addTab("tab2", pnlWithdraw);
+
+        jPanel23.setBackground(new java.awt.Color(255, 102, 0));
+
+        jLabel25.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel25.setText("TRANSFER MONEY ");
+
+        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
+        jPanel23.setLayout(jPanel23Layout);
+        jPanel23Layout.setHorizontalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel23Layout.setVerticalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel23Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        lblAccountNumber1.setText("SENDER ACCOUNT NUMBER ");
+
+        btnWithdrawAccountNo1.setBackground(new java.awt.Color(0, 102, 102));
+        btnWithdrawAccountNo1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnWithdrawAccountNo1.setForeground(new java.awt.Color(255, 255, 255));
+        btnWithdrawAccountNo1.setText("SEARCH A/C");
+
+        btnWithdrawSearchClear1.setBackground(new java.awt.Color(0, 102, 102));
+        btnWithdrawSearchClear1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnWithdrawSearchClear1.setForeground(new java.awt.Color(255, 255, 255));
+        btnWithdrawSearchClear1.setText("CLEAR");
+
+        pnlConfirmDepositeDetail2.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel24.setBackground(new java.awt.Color(0, 102, 102));
+
+        jLabel58.setBackground(new java.awt.Color(0, 102, 102));
+        jLabel58.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel58.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel58.setText("CONFIRM SENDER ACCOUNT DETAILS");
+
+        javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
+        jPanel24.setLayout(jPanel24Layout);
+        jPanel24Layout.setHorizontalGroup(
+            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel58, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel24Layout.setVerticalGroup(
+            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel24Layout.createSequentialGroup()
+                .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jLabel59.setText("ACCOUNT HOLDER      :");
+
+        jLabel60.setText("AADHAR NUMBER        :");
+
+        jLabel61.setText("MOBILE NUMBER     :");
+
+        jLabel62.setText("BALANCE                   :");
+
+        btnWithdrawConfirmAccount1.setBackground(new java.awt.Color(0, 102, 102));
+        btnWithdrawConfirmAccount1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnWithdrawConfirmAccount1.setForeground(new java.awt.Color(255, 255, 255));
+        btnWithdrawConfirmAccount1.setText("CONFIRM A/C");
+
+        btnWithdrawConfirmCancel1.setBackground(new java.awt.Color(0, 102, 102));
+        btnWithdrawConfirmCancel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnWithdrawConfirmCancel1.setForeground(new java.awt.Color(255, 255, 255));
+        btnWithdrawConfirmCancel1.setText("CANCEL");
+
+        lblWithdrawSetAccountHolderName1.setText("jLabel47");
+
+        lblWithdrawSetAadharNo1.setText("jLabel47");
+
+        lblWithdrawSetMobileNo1.setText("jLabel47");
+
+        lblWithdrawSetBalance1.setText("jLabel47");
+
+        javax.swing.GroupLayout pnlConfirmDepositeDetail2Layout = new javax.swing.GroupLayout(pnlConfirmDepositeDetail2);
+        pnlConfirmDepositeDetail2.setLayout(pnlConfirmDepositeDetail2Layout);
+        pnlConfirmDepositeDetail2Layout.setHorizontalGroup(
+            pnlConfirmDepositeDetail2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pnlConfirmDepositeDetail2Layout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addGroup(pnlConfirmDepositeDetail2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlConfirmDepositeDetail2Layout.createSequentialGroup()
+                        .addComponent(jLabel59)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblWithdrawSetAccountHolderName1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlConfirmDepositeDetail2Layout.createSequentialGroup()
+                        .addComponent(jLabel60)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblWithdrawSetAadharNo1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(129, 129, 129)
+                .addGroup(pnlConfirmDepositeDetail2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlConfirmDepositeDetail2Layout.createSequentialGroup()
+                        .addComponent(jLabel61)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblWithdrawSetMobileNo1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlConfirmDepositeDetail2Layout.createSequentialGroup()
+                        .addComponent(jLabel62)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblWithdrawSetBalance1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(244, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlConfirmDepositeDetail2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnWithdrawConfirmAccount1)
+                .addGap(45, 45, 45)
+                .addComponent(btnWithdrawConfirmCancel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(518, 518, 518))
+        );
+        pnlConfirmDepositeDetail2Layout.setVerticalGroup(
+            pnlConfirmDepositeDetail2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlConfirmDepositeDetail2Layout.createSequentialGroup()
+                .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addGroup(pnlConfirmDepositeDetail2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel61)
+                    .addComponent(jLabel59)
+                    .addComponent(lblWithdrawSetAccountHolderName1)
+                    .addComponent(lblWithdrawSetMobileNo1))
+                .addGap(18, 18, 18)
+                .addGroup(pnlConfirmDepositeDetail2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel60)
+                    .addComponent(jLabel62)
+                    .addComponent(lblWithdrawSetAadharNo1)
+                    .addComponent(lblWithdrawSetBalance1))
+                .addGap(51, 51, 51)
+                .addGroup(pnlConfirmDepositeDetail2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnWithdrawConfirmCancel1)
+                    .addComponent(btnWithdrawConfirmAccount1))
+                .addGap(37, 37, 37))
+        );
+
+        jPanel25.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblAccountNumber2.setText("RECEIVER ACCOUNT NUMBER ");
+
+        btnWithdrawAccountNo2.setBackground(new java.awt.Color(0, 102, 102));
+        btnWithdrawAccountNo2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnWithdrawAccountNo2.setForeground(new java.awt.Color(255, 255, 255));
+        btnWithdrawAccountNo2.setText("SEARCH A/C");
+
+        btnWithdrawSearchClear2.setBackground(new java.awt.Color(0, 102, 102));
+        btnWithdrawSearchClear2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnWithdrawSearchClear2.setForeground(new java.awt.Color(255, 255, 255));
+        btnWithdrawSearchClear2.setText("CLEAR");
+
+        javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
+        jPanel25.setLayout(jPanel25Layout);
+        jPanel25Layout.setHorizontalGroup(
+            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel25Layout.createSequentialGroup()
+                .addGap(191, 191, 191)
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel25Layout.createSequentialGroup()
+                        .addComponent(txtWithdrawAccountNumber2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(134, 134, 134)
+                        .addComponent(btnWithdrawAccountNo2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52)
+                        .addComponent(btnWithdrawSearchClear2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel25Layout.createSequentialGroup()
+                        .addComponent(lblAccountNumber2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(927, 927, 927))))
+        );
+        jPanel25Layout.setVerticalGroup(
+            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel25Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addComponent(lblAccountNumber2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtWithdrawAccountNumber2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnWithdrawAccountNo2)
+                    .addComponent(btnWithdrawSearchClear2))
+                .addContainerGap(61, Short.MAX_VALUE))
+        );
+
+        pnlConfirmDepositeDetail3.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel26.setBackground(new java.awt.Color(0, 102, 102));
+
+        jLabel63.setBackground(new java.awt.Color(0, 102, 102));
+        jLabel63.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel63.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel63.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel63.setText("CONFIRM RECEIVER ACCOUNT DETAILS");
+
+        javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
+        jPanel26.setLayout(jPanel26Layout);
+        jPanel26Layout.setHorizontalGroup(
+            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel63, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel26Layout.setVerticalGroup(
+            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel26Layout.createSequentialGroup()
+                .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jLabel64.setText("ACCOUNT HOLDER      :");
+
+        jLabel65.setText("AADHAR NUMBER        :");
+
+        jLabel66.setText("MOBILE NUMBER     :");
+
+        jLabel67.setText("BALANCE                   :");
+
+        btnWithdrawConfirmAccount2.setBackground(new java.awt.Color(0, 102, 102));
+        btnWithdrawConfirmAccount2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnWithdrawConfirmAccount2.setForeground(new java.awt.Color(255, 255, 255));
+        btnWithdrawConfirmAccount2.setText("CONFIRM A/C");
+
+        btnWithdrawConfirmCancel2.setBackground(new java.awt.Color(0, 102, 102));
+        btnWithdrawConfirmCancel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnWithdrawConfirmCancel2.setForeground(new java.awt.Color(255, 255, 255));
+        btnWithdrawConfirmCancel2.setText("CANCEL");
+
+        lblWithdrawSetAccountHolderName2.setText("jLabel47");
+
+        lblWithdrawSetAadharNo2.setText("jLabel47");
+
+        lblWithdrawSetMobileNo2.setText("jLabel47");
+
+        lblWithdrawSetBalance2.setText("jLabel47");
+
+        javax.swing.GroupLayout pnlConfirmDepositeDetail3Layout = new javax.swing.GroupLayout(pnlConfirmDepositeDetail3);
+        pnlConfirmDepositeDetail3.setLayout(pnlConfirmDepositeDetail3Layout);
+        pnlConfirmDepositeDetail3Layout.setHorizontalGroup(
+            pnlConfirmDepositeDetail3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pnlConfirmDepositeDetail3Layout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addGroup(pnlConfirmDepositeDetail3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlConfirmDepositeDetail3Layout.createSequentialGroup()
+                        .addComponent(jLabel64)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblWithdrawSetAccountHolderName2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlConfirmDepositeDetail3Layout.createSequentialGroup()
+                        .addComponent(jLabel65)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblWithdrawSetAadharNo2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(129, 129, 129)
+                .addGroup(pnlConfirmDepositeDetail3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlConfirmDepositeDetail3Layout.createSequentialGroup()
+                        .addComponent(jLabel66)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblWithdrawSetMobileNo2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlConfirmDepositeDetail3Layout.createSequentialGroup()
+                        .addComponent(jLabel67)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblWithdrawSetBalance2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(244, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlConfirmDepositeDetail3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnWithdrawConfirmAccount2)
+                .addGap(39, 39, 39)
+                .addComponent(btnWithdrawConfirmCancel2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(581, 581, 581))
+        );
+        pnlConfirmDepositeDetail3Layout.setVerticalGroup(
+            pnlConfirmDepositeDetail3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlConfirmDepositeDetail3Layout.createSequentialGroup()
+                .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addGroup(pnlConfirmDepositeDetail3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel66)
+                    .addComponent(jLabel64)
+                    .addComponent(lblWithdrawSetAccountHolderName2)
+                    .addComponent(lblWithdrawSetMobileNo2))
+                .addGap(18, 18, 18)
+                .addGroup(pnlConfirmDepositeDetail3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel65)
+                    .addComponent(jLabel67)
+                    .addComponent(lblWithdrawSetAadharNo2)
+                    .addComponent(lblWithdrawSetBalance2))
+                .addGap(51, 51, 51)
+                .addGroup(pnlConfirmDepositeDetail3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnWithdrawConfirmCancel2)
+                    .addComponent(btnWithdrawConfirmAccount2))
+                .addGap(37, 37, 37))
+        );
+
+        jPanel29.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel30.setBackground(new java.awt.Color(0, 102, 102));
+
+        jLabel69.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel69.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel69.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel69.setText("TRANSFER AMOUNT");
+
+        javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
+        jPanel30.setLayout(jPanel30Layout);
+        jPanel30Layout.setHorizontalGroup(
+            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel30Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel69, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel30Layout.setVerticalGroup(
+            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel30Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel69, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jLabel70.setText("ENTER AMOUNT :");
+
+        btnWithdrawAmount1.setBackground(new java.awt.Color(0, 102, 102));
+        btnWithdrawAmount1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnWithdrawAmount1.setForeground(new java.awt.Color(255, 255, 255));
+        btnWithdrawAmount1.setText("TRANSFER");
+
+        btnWithdrawAmountCancel1.setBackground(new java.awt.Color(0, 102, 102));
+        btnWithdrawAmountCancel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnWithdrawAmountCancel1.setForeground(new java.awt.Color(255, 255, 255));
+        btnWithdrawAmountCancel1.setText("CANCEL");
+
+        javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
+        jPanel29.setLayout(jPanel29Layout);
+        jPanel29Layout.setHorizontalGroup(
+            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel29Layout.createSequentialGroup()
+                .addGap(154, 154, 154)
+                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel29Layout.createSequentialGroup()
+                        .addComponent(txtWithdrawAmount1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(119, 119, 119)
+                        .addComponent(btnWithdrawAmount1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44)
+                        .addComponent(btnWithdrawAmountCancel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel29Layout.setVerticalGroup(
+            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel29Layout.createSequentialGroup()
+                .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
+                .addComponent(jLabel70)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtWithdrawAmount1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnWithdrawAmount1)
+                    .addComponent(btnWithdrawAmountCancel1))
+                .addGap(0, 81, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pnlTranferMoneyLayout = new javax.swing.GroupLayout(pnlTranferMoney);
+        pnlTranferMoney.setLayout(pnlTranferMoneyLayout);
+        pnlTranferMoneyLayout.setHorizontalGroup(
+            pnlTranferMoneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlConfirmDepositeDetail2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pnlTranferMoneyLayout.createSequentialGroup()
+                .addGap(191, 191, 191)
+                .addGroup(pnlTranferMoneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblAccountNumber1, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(txtWithdrawAccountNumber1))
+                .addGap(119, 119, 119)
+                .addComponent(btnWithdrawAccountNo1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addComponent(btnWithdrawSearchClear1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlConfirmDepositeDetail3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        pnlTranferMoneyLayout.setVerticalGroup(
+            pnlTranferMoneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTranferMoneyLayout.createSequentialGroup()
+                .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(lblAccountNumber1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlTranferMoneyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtWithdrawAccountNumber1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnWithdrawAccountNo1)
+                    .addComponent(btnWithdrawSearchClear1))
+                .addGap(66, 66, 66)
+                .addComponent(pnlConfirmDepositeDetail2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnlConfirmDepositeDetail3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 242, Short.MAX_VALUE))
+        );
+
+        tabTransactionPanel.addTab("tab3", pnlTranferMoney);
+
+        jPanel31.setBackground(new java.awt.Color(255, 102, 0));
+
+        jLabel26.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel26.setText("TRANSACTION STATEMENT");
+
+        javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
+        jPanel31.setLayout(jPanel31Layout);
+        jPanel31Layout.setHorizontalGroup(
+            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel31Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, 1275, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel31Layout.setVerticalGroup(
+            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel31Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jLabel47.setText("ACCOUNT NUMBER ");
+
+        btnDepositeAccountNo1.setBackground(new java.awt.Color(0, 102, 102));
+        btnDepositeAccountNo1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnDepositeAccountNo1.setForeground(new java.awt.Color(255, 255, 255));
+        btnDepositeAccountNo1.setText("SEARCH A/C");
+
+        btnDepositeSearchClear1.setBackground(new java.awt.Color(0, 102, 102));
+        btnDepositeSearchClear1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnDepositeSearchClear1.setForeground(new java.awt.Color(255, 255, 255));
+        btnDepositeSearchClear1.setText("CLEAR");
+
+        pnlTransactionHistory.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel33.setBackground(new java.awt.Color(0, 102, 102));
+
+        jLabel71.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel71.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel71.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel71.setText("TRANSACTION'S");
+
+        javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
+        jPanel33.setLayout(jPanel33Layout);
+        jPanel33Layout.setHorizontalGroup(
+            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel71, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel33Layout.setVerticalGroup(
+            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel33Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel71, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jLabel72.setText("ACCOUNT HOLDER      :");
+
+        jLabel73.setText("AADHAR NUMBER        :");
+
+        lblWithdrawSetAadharNo3.setText("jLabel47");
+
+        lblWithdrawSetAccountHolderName3.setText("jLabel47");
+
+        jLabel74.setText("MOBILE NUMBER     :");
+
+        lblWithdrawSetMobileNo3.setText("jLabel47");
+
+        lblWithdrawSetBalance3.setText("jLabel47");
+
+        jLabel75.setText("BALANCE                   :");
+
+        tableTransaction.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "TRANSACTION ID", "ACCOUNT NO", "PARTICULARS", "DEBIT", "CREDIT", "STATUS", "DATE", "BALANCE"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tableTransaction);
+
+        javax.swing.GroupLayout pnlTransactionHistoryLayout = new javax.swing.GroupLayout(pnlTransactionHistory);
+        pnlTransactionHistory.setLayout(pnlTransactionHistoryLayout);
+        pnlTransactionHistoryLayout.setHorizontalGroup(
+            pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pnlTransactionHistoryLayout.createSequentialGroup()
+                .addGap(127, 127, 127)
+                .addGroup(pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlTransactionHistoryLayout.createSequentialGroup()
+                        .addComponent(jLabel72)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblWithdrawSetAccountHolderName3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlTransactionHistoryLayout.createSequentialGroup()
+                        .addComponent(jLabel73)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblWithdrawSetAadharNo3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(129, 129, 129)
+                .addGroup(pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlTransactionHistoryLayout.createSequentialGroup()
+                        .addComponent(jLabel74)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblWithdrawSetMobileNo3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlTransactionHistoryLayout.createSequentialGroup()
+                        .addComponent(jLabel75)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblWithdrawSetBalance3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTransactionHistoryLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addContainerGap())
+        );
+        pnlTransactionHistoryLayout.setVerticalGroup(
+            pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTransactionHistoryLayout.createSequentialGroup()
+                .addComponent(jPanel33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43)
+                .addGroup(pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel74)
+                    .addComponent(jLabel72)
+                    .addComponent(lblWithdrawSetAccountHolderName3)
+                    .addComponent(lblWithdrawSetMobileNo3))
+                .addGap(18, 18, 18)
+                .addGroup(pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel73)
+                    .addComponent(jLabel75)
+                    .addComponent(lblWithdrawSetAadharNo3)
+                    .addComponent(lblWithdrawSetBalance3))
+                .addGap(56, 56, 56)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(96, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pnlStatementLayout = new javax.swing.GroupLayout(pnlStatement);
+        pnlStatement.setLayout(pnlStatementLayout);
+        pnlStatementLayout.setHorizontalGroup(
+            pnlStatementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pnlStatementLayout.createSequentialGroup()
+                .addGap(191, 191, 191)
+                .addGroup(pnlStatementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlStatementLayout.createSequentialGroup()
+                        .addComponent(txtDepositeAccountNumber1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(119, 119, 119)
+                        .addComponent(btnDepositeAccountNo1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(btnDepositeSearchClear1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(pnlTransactionHistory, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        pnlStatementLayout.setVerticalGroup(
+            pnlStatementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlStatementLayout.createSequentialGroup()
+                .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45)
+                .addComponent(jLabel47)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlStatementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDepositeAccountNumber1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDepositeAccountNo1)
+                    .addComponent(btnDepositeSearchClear1))
+                .addGap(66, 66, 66)
+                .addComponent(pnlTransactionHistory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 323, Short.MAX_VALUE))
+        );
+
+        tabTransactionPanel.addTab("tab4", pnlStatement);
 
         javax.swing.GroupLayout pnlTranscationLayout = new javax.swing.GroupLayout(pnlTranscation);
         pnlTranscation.setLayout(pnlTranscationLayout);
         pnlTranscationLayout.setHorizontalGroup(
             pnlTranscationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlHeadingTransaction, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(pnlTranscationLayout.createSequentialGroup()
-                .addComponent(pnlTransactionMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 1172, Short.MAX_VALUE))
+                .addGap(180, 180, 180)
+                .addComponent(tabTransactionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(pnlTransactionMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(pnlHeadingTransaction, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnlTranscationLayout.setVerticalGroup(
             pnlTranscationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlTranscationLayout.createSequentialGroup()
-                .addComponent(pnlHeadingTransaction, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pnlTransactionMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 517, Short.MAX_VALUE))
+                .addGap(70, 70, 70)
+                .addComponent(tabTransactionPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(pnlTranscationLayout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addComponent(pnlTransactionMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(pnlHeadingTransaction, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         scrollPanelTransaction.setViewportView(pnlTranscation);
 
         tabCustomMenu.addTab("TRANSACTION", scrollPanelTransaction);
-        tabCustomMenu.addTab("EMPLOYEE", scrollPaneTransaction);
-        tabCustomMenu.addTab("LOAN", jScrollPane2);
-        tabCustomMenu.addTab("ABOUT", jScrollPane3);
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("DASHBOARD");
 
         javax.swing.GroupLayout pnMainPanelDashboardLayout = new javax.swing.GroupLayout(pnMainPanelDashboard);
         pnMainPanelDashboard.setLayout(pnMainPanelDashboardLayout);
         pnMainPanelDashboardLayout.setHorizontalGroup(
             pnMainPanelDashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pnBankName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(tabCustomMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addGroup(pnMainPanelDashboardLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tabCustomMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnMainPanelDashboardLayout.setVerticalGroup(
             pnMainPanelDashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnMainPanelDashboardLayout.createSequentialGroup()
                 .addComponent(pnBankName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tabCustomMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -2631,7 +3875,7 @@ public class Dashboard extends javax.swing.JFrame {
             pnlCloseAccountPanel.setVisible(true);
 
             JTextField[] textField = { txtCloseFname ,txtCloseMname, txtCloseLname, txtCloseDOB ,txtCloseGender ,txtCloseMobileNo ,txtCloseEmail,
-            txtCloseAddress,txtCloseCity,txtCloseDivision,txtCloseDistrict,txtClosePin, txtCloseState ,txtCloseAadhar,txtCloseAccountNo,txtCloseBalance,txtCloseOpeningDate };
+                txtCloseAddress,txtCloseCity,txtCloseDivision,txtCloseDistrict,txtClosePin, txtCloseState ,txtCloseAadhar,txtCloseAccountNo,txtCloseBalance,txtCloseOpeningDate };
 
             setTextOptimizeCode(resultSet, textField);
 
@@ -2658,7 +3902,7 @@ public class Dashboard extends javax.swing.JFrame {
         Date dateCheckSelect = txtUpdateDOB.getDate();
 
         if(dateCheckSelect != null){
-            
+
             SimpleDateFormat simpleDOB = new SimpleDateFormat("dd-MMM-yyyy");
 
             String gender = txtUpdateGender.getText();
@@ -2675,12 +3919,12 @@ public class Dashboard extends javax.swing.JFrame {
 
             boolean validationConfirm ;
 
-            String info[] = {fname, mname, lname, dateofbirth, gender , mobileno, email, address, city, division, district, pinCode, state};        
+            String info[] = {fname, mname, lname, dateofbirth, gender , mobileno, email, address, city, division, district, pinCode, state};
 
             JTextField txtInfo[] = { txtUpdateFirstName, txtUpdateMiddleName, txtUpdateLastName, txtUpdateMobileNo, txtUpdateEmail, txtUpdateAddress, txtUpdateCity, txtUpdateDivision, txtUpdateDistrict, txtUpdatePincode, txtUpdateState};
 
             JLabel lblInfo[] = { lblUpdateFirstNameREQ, lblUpdateMiddleNameREQ, lblUpdateLastNameREQ, lblUpdateDOBREQ, lblUpdateGenderREQ, lblUpdateMobileREQ, lblUpdateEmailREQ,
-                                 lblUpdateAddressREQ, lblUpdateCityREQ, lblUpdateDivisionREQ, lblUpdateDistrictREQ, lblUpdatePincodeREQ, lblUpdateStateREQ};
+                lblUpdateAddressREQ, lblUpdateCityREQ, lblUpdateDivisionREQ, lblUpdateDistrictREQ, lblUpdatePincodeREQ, lblUpdateStateREQ};
 
             validationConfirm = personalInformationClass.personalInformation(openAccountModel,info , txtInfo, txtUpdateDOB, lblInfo );
 
@@ -2709,6 +3953,11 @@ public class Dashboard extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_btnUpdateKYCActionPerformed
+
+    private void btnUpdateINFORMATIONresetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateINFORMATIONresetActionPerformed
+        // TODO add your handling code here:
+        updateCancelCodeOptimize();
+    }//GEN-LAST:event_btnUpdateINFORMATIONresetActionPerformed
 
     private void btnSearchFORupdateINFORMATIONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchFORupdateINFORMATIONActionPerformed
 
@@ -2816,14 +4065,14 @@ public class Dashboard extends javax.swing.JFrame {
                 openAccountModel.getBalance(),
                 formatedDate
             );
-            
+
             String accountNo = openAccountModel.getAccountNumber();
             balance = openAccountModel.getBalance();
             String particulars = "INITIAL AMOUNT - TO CASH";
             String withdrawAmount = " ";
-                
+
             new TransactionTracking( accountNo ,particulars, withdrawAmount ,balance, balance);
-            
+
             JOptionPane.showMessageDialog(null, "Acount Open Successfully \n NOTE YOUR ACCOUNT NO :" + openAccountModel.getAccountNumber());
 
             pnlInitialBalance.setVisible(false);
@@ -2891,16 +4140,16 @@ public class Dashboard extends javax.swing.JFrame {
         String state = txtState.getText();
 
         boolean validationConfirm ;
-        
+
         String info[] = { fname, mname, lname, dateofbirth, gender, mobileno, email, address, city, division, district, pinCode, state};
         //index             0     1       2     3              4        5       6       7       8       9       10          11      12
-        
-        JTextField txtField[] = {txtFirstName, txtMiddleName, txtLastName, txtMobileNo, txtEmail, txtAddress, txtCity, txtDivision, txtDistrict, txtPinCode, txtState}; 
-        // index                    0               1               2            3           4       5       6            7          8           9       10          
-        
+
+        JTextField txtField[] = {txtFirstName, txtMiddleName, txtLastName, txtMobileNo, txtEmail, txtAddress, txtCity, txtDivision, txtDistrict, txtPinCode, txtState};
+        // index                    0               1               2            3           4       5       6            7          8           9       10
+
         JLabel lblInfo[] = { lblFirstNameReq, lblMiddleNameReq, lblLastNameReq, lblDateReq, lblGenderReq, lblMobileReq, lblEmailReq,
-                               lblAddressReq, lblCityReq, lblDivisionReq, lblDistrictReq, lblPinCodeReq, lblStateReq};
-        
+            lblAddressReq, lblCityReq, lblDivisionReq, lblDistrictReq, lblPinCodeReq, lblStateReq};
+
         validationConfirm = personalInformationClass.personalInformation(openAccountModel, info, txtField, dateDOB, lblInfo);
 
         if(validationConfirm)
@@ -2912,10 +4161,25 @@ public class Dashboard extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnNextForAccountDetailsActionPerformed
 
-    private void btnUpdateINFORMATIONresetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateINFORMATIONresetActionPerformed
+    private void lblDepositeMouseClickMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblDepositeMouseClickMouseClicked
         // TODO add your handling code here:
-        updateCancelCodeOptimize();
-    }//GEN-LAST:event_btnUpdateINFORMATIONresetActionPerformed
+       tabTransactionPanel.setSelectedIndex(0);
+    }//GEN-LAST:event_lblDepositeMouseClickMouseClicked
+
+    private void lblWithdrawMouseClickMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblWithdrawMouseClickMouseClicked
+        // TODO add your handling code here:
+        tabTransactionPanel.setSelectedIndex(1);
+    }//GEN-LAST:event_lblWithdrawMouseClickMouseClicked
+
+    private void lblTransferMoneyMouseClickMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblTransferMoneyMouseClickMouseClicked
+        // TODO add your handling code here:
+        tabTransactionPanel.setSelectedIndex(2);
+    }//GEN-LAST:event_lblTransferMoneyMouseClickMouseClicked
+
+    private void lblStatementMouseClickMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblStatementMouseClickMouseClicked
+        // TODO add your handling code here:
+        tabTransactionPanel.setSelectedIndex(3);
+    }//GEN-LAST:event_lblStatementMouseClickMouseClicked
 
     public void resetPersonalInfoCode(){
           txtFirstName.setText("");
@@ -3028,6 +4292,14 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton btnCloseAccountRESET;
     private javax.swing.JButton btnCloseAccountSearch;
     private javax.swing.JButton btnCreateAccount;
+    private javax.swing.JButton btnDepositeAccountNo;
+    private javax.swing.JButton btnDepositeAccountNo1;
+    private javax.swing.JButton btnDepositeAmount;
+    private javax.swing.JButton btnDepositeAmountCancel;
+    private javax.swing.JButton btnDepositeConfirmAccount;
+    private javax.swing.JButton btnDepositeConfirmCancel;
+    private javax.swing.JButton btnDepositeSearchClear;
+    private javax.swing.JButton btnDepositeSearchClear1;
     private javax.swing.JButton btnNextForAccountDetails;
     private javax.swing.JButton btnNextForIntialBalance;
     private javax.swing.JButton btnOKaccountDETAIL;
@@ -3038,6 +4310,22 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton btnUpdateCancel;
     private javax.swing.JButton btnUpdateINFORMATIONreset;
     private javax.swing.JButton btnUpdateKYC;
+    private javax.swing.JButton btnWithdrawAccountNo;
+    private javax.swing.JButton btnWithdrawAccountNo1;
+    private javax.swing.JButton btnWithdrawAccountNo2;
+    private javax.swing.JButton btnWithdrawAmount;
+    private javax.swing.JButton btnWithdrawAmount1;
+    private javax.swing.JButton btnWithdrawAmountCancel;
+    private javax.swing.JButton btnWithdrawAmountCancel1;
+    private javax.swing.JButton btnWithdrawConfirmAccount;
+    private javax.swing.JButton btnWithdrawConfirmAccount1;
+    private javax.swing.JButton btnWithdrawConfirmAccount2;
+    private javax.swing.JButton btnWithdrawConfirmCancel;
+    private javax.swing.JButton btnWithdrawConfirmCancel1;
+    private javax.swing.JButton btnWithdrawConfirmCancel2;
+    private javax.swing.JButton btnWithdrawSearchClear;
+    private javax.swing.JButton btnWithdrawSearchClear1;
+    private javax.swing.JButton btnWithdrawSearchClear2;
     private com.toedter.calendar.JDateChooser dateDOB;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -3055,6 +4343,10 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
@@ -3074,9 +4366,40 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
@@ -3086,16 +4409,32 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel27;
+    private javax.swing.JPanel jPanel28;
+    private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel30;
+    private javax.swing.JPanel jPanel31;
+    private javax.swing.JPanel jPanel33;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel jpAdvertiseManage;
     private javax.swing.JPanel jplMarqueeWelcome;
     private javax.swing.JPanel jpnAttention;
@@ -3103,6 +4442,9 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel lblAadhar;
     private javax.swing.JLabel lblAadharReq;
     private javax.swing.JLabel lblAccountManages;
+    private javax.swing.JLabel lblAccountNumber;
+    private javax.swing.JLabel lblAccountNumber1;
+    private javax.swing.JLabel lblAccountNumber2;
     private javax.swing.JLabel lblAddress;
     private javax.swing.JLabel lblAddressReq;
     private javax.swing.JLabel lblAttentionImage;
@@ -3132,6 +4474,11 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel lblCloseState;
     private javax.swing.JLabel lblDOB;
     private javax.swing.JLabel lblDateReq;
+    private javax.swing.JLabel lblDepositeMouseClick;
+    private javax.swing.JLabel lblDepositeSetAadharNo;
+    private javax.swing.JLabel lblDepositeSetAccountHolderName;
+    private javax.swing.JLabel lblDepositeSetBalance;
+    private javax.swing.JLabel lblDepositeSetMobileNo;
     private javax.swing.JLabel lblDistrict;
     private javax.swing.JLabel lblDistrictReq;
     private javax.swing.JLabel lblDivision;
@@ -3170,7 +4517,9 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel lblSearchPinCode;
     private javax.swing.JLabel lblSearchState;
     private javax.swing.JLabel lblStateReq;
+    private javax.swing.JLabel lblStatementMouseClick;
     private javax.swing.JLabel lblTransactionHeading;
+    private javax.swing.JLabel lblTransferMoneyMouseClick;
     private javax.swing.JLabel lblUpdateADDRESS;
     private javax.swing.JLabel lblUpdateAccountNo;
     private javax.swing.JLabel lblUpdateAddressREQ;
@@ -3199,6 +4548,23 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel lblUpdateSTATE;
     private javax.swing.JLabel lblUpdateStateREQ;
     private javax.swing.JLabel lblWelcome;
+    private javax.swing.JLabel lblWithdrawMouseClick;
+    private javax.swing.JLabel lblWithdrawSetAadharNo;
+    private javax.swing.JLabel lblWithdrawSetAadharNo1;
+    private javax.swing.JLabel lblWithdrawSetAadharNo2;
+    private javax.swing.JLabel lblWithdrawSetAadharNo3;
+    private javax.swing.JLabel lblWithdrawSetAccountHolderName;
+    private javax.swing.JLabel lblWithdrawSetAccountHolderName1;
+    private javax.swing.JLabel lblWithdrawSetAccountHolderName2;
+    private javax.swing.JLabel lblWithdrawSetAccountHolderName3;
+    private javax.swing.JLabel lblWithdrawSetBalance;
+    private javax.swing.JLabel lblWithdrawSetBalance1;
+    private javax.swing.JLabel lblWithdrawSetBalance2;
+    private javax.swing.JLabel lblWithdrawSetBalance3;
+    private javax.swing.JLabel lblWithdrawSetMobileNo;
+    private javax.swing.JLabel lblWithdrawSetMobileNo1;
+    private javax.swing.JLabel lblWithdrawSetMobileNo2;
+    private javax.swing.JLabel lblWithdrawSetMobileNo3;
     private javax.swing.JPanel pnBankName;
     private javax.swing.JPanel pnCarLoan;
     private javax.swing.JPanel pnMainPanelDashboard;
@@ -3210,6 +4576,12 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel pnlAddressHeading;
     private javax.swing.JPanel pnlCloseAccount;
     private javax.swing.JPanel pnlCloseAccountPanel;
+    private javax.swing.JPanel pnlConfirmDepositeDetail;
+    private javax.swing.JPanel pnlConfirmDepositeDetail1;
+    private javax.swing.JPanel pnlConfirmDepositeDetail2;
+    private javax.swing.JPanel pnlConfirmDepositeDetail3;
+    private javax.swing.JPanel pnlDeposite;
+    private javax.swing.JPanel pnlDepositeLable;
     private javax.swing.JPanel pnlFORAccountDetails;
     private javax.swing.JPanel pnlHeadingTransaction;
     private javax.swing.JPanel pnlHome;
@@ -3218,20 +4590,25 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel pnlPersonalInfo;
     private javax.swing.JPanel pnlSearchAccount;
     private javax.swing.JPanel pnlSearchAccountInformation;
+    private javax.swing.JPanel pnlStatement;
+    private javax.swing.JPanel pnlTranferMoney;
+    private javax.swing.JPanel pnlTransactionHistory;
     private javax.swing.JPanel pnlTransactionMenu;
     private javax.swing.JPanel pnlTranscation;
     private javax.swing.JPanel pnlUpdateKYC;
     private javax.swing.JPanel pnlUpdateKYCdataENTER;
+    private javax.swing.JPanel pnlWithdraw;
     private javax.swing.JRadioButton radioBtnFemale;
     private javax.swing.JRadioButton radioBtnMale;
     private javax.swing.JRadioButton radioBtnOther;
     private javax.swing.ButtonGroup radioGroupGender;
-    private javax.swing.JScrollPane scrollPaneTransaction;
     private javax.swing.JScrollPane scrollPanelTransaction;
     private javax.swing.JScrollPane scrollpaneAccountMain;
     private javax.swing.JScrollPane spHomePage;
     private com.yogesh.tabpanel.TabbedPaneCustom tabCustomAccountManage;
     private com.yogesh.tabpanel.TabbedPaneCustom tabCustomMenu;
+    private javax.swing.JTabbedPane tabTransactionPanel;
+    private javax.swing.JTable tableTransaction;
     private javax.swing.JTextField txtAadhar;
     private javax.swing.JTextField txtAccountNo;
     private javax.swing.JTextField txtAccountNoClose;
@@ -3257,6 +4634,9 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField txtCloseOpeningDate;
     private javax.swing.JTextField txtClosePin;
     private javax.swing.JTextField txtCloseState;
+    private javax.swing.JTextField txtDepositeAccountNumber;
+    private javax.swing.JTextField txtDepositeAccountNumber1;
+    private javax.swing.JTextField txtDepositeAmount;
     private javax.swing.JTextField txtDistrict;
     private javax.swing.JTextField txtDivision;
     private javax.swing.JTextField txtEmail;
@@ -3299,5 +4679,10 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField txtUpdateMobileNo;
     private javax.swing.JTextField txtUpdatePincode;
     private javax.swing.JTextField txtUpdateState;
+    private javax.swing.JTextField txtWithdrawAccountNumber;
+    private javax.swing.JTextField txtWithdrawAccountNumber1;
+    private javax.swing.JTextField txtWithdrawAccountNumber2;
+    private javax.swing.JTextField txtWithdrawAmount;
+    private javax.swing.JTextField txtWithdrawAmount1;
     // End of variables declaration//GEN-END:variables
 }
