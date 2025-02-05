@@ -8,6 +8,7 @@ import com.yogesh.openaccount.OpenAccountModel;
 import com.yogesh.optimization.AccountAvailableClass;
 import com.yogesh.optimization.PersonalInformationClass;
 import com.yogesh.searchaccount.SearchAccount;
+import com.yogesh.transaction.DepositeCash;
 import com.yogesh.transaction.TransactionTracking;
 import com.yogesh.updateaccount.UpdateAccount;
 import java.sql.ResultSet;
@@ -27,7 +28,7 @@ import javax.swing.JTextField;
 public class Dashboard extends javax.swing.JFrame {
     
     OpenAccountModel openAccountModel = new OpenAccountModel();
-  
+    
     /**
      * Creates new form Dashboard
      */
@@ -339,10 +340,10 @@ public class Dashboard extends javax.swing.JFrame {
         lblDepositeSetAadharNo = new javax.swing.JLabel();
         lblDepositeSetMobileNo = new javax.swing.JLabel();
         lblDepositeSetBalance = new javax.swing.JLabel();
-        jPanel17 = new javax.swing.JPanel();
+        pnlDepositeAmount = new javax.swing.JPanel();
         jPanel18 = new javax.swing.JPanel();
         jLabel51 = new javax.swing.JLabel();
-        jLabel52 = new javax.swing.JLabel();
+        lblDepositeEnterAmount = new javax.swing.JLabel();
         txtDepositeAmount = new javax.swing.JTextField();
         btnDepositeAmount = new javax.swing.JButton();
         btnDepositeAmountCancel = new javax.swing.JButton();
@@ -425,19 +426,20 @@ public class Dashboard extends javax.swing.JFrame {
         txtDepositeAccountNumber1 = new javax.swing.JTextField();
         btnDepositeAccountNo1 = new javax.swing.JButton();
         btnDepositeSearchClear1 = new javax.swing.JButton();
+        scrollPanelTransactionTable = new javax.swing.JScrollPane();
         pnlTransactionHistory = new javax.swing.JPanel();
-        jPanel33 = new javax.swing.JPanel();
+        jPanel27 = new javax.swing.JPanel();
+        jLabel68 = new javax.swing.JLabel();
         jLabel71 = new javax.swing.JLabel();
+        lblWithdrawSetAccountHolderName3 = new javax.swing.JLabel();
+        lblWithdrawSetAadharNo3 = new javax.swing.JLabel();
         jLabel72 = new javax.swing.JLabel();
         jLabel73 = new javax.swing.JLabel();
-        lblWithdrawSetAadharNo3 = new javax.swing.JLabel();
-        lblWithdrawSetAccountHolderName3 = new javax.swing.JLabel();
-        jLabel74 = new javax.swing.JLabel();
         lblWithdrawSetMobileNo3 = new javax.swing.JLabel();
         lblWithdrawSetBalance3 = new javax.swing.JLabel();
-        jLabel75 = new javax.swing.JLabel();
+        jLabel74 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tableTransaction = new javax.swing.JTable();
+        jTable1 = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
 
         jLabel1.setBackground(new java.awt.Color(0, 102, 102));
@@ -2691,12 +2693,18 @@ public class Dashboard extends javax.swing.JFrame {
         btnDepositeAccountNo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnDepositeAccountNo.setForeground(new java.awt.Color(255, 255, 255));
         btnDepositeAccountNo.setText("SEARCH A/C");
+        btnDepositeAccountNo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDepositeAccountNoActionPerformed(evt);
+            }
+        });
 
         btnDepositeSearchClear.setBackground(new java.awt.Color(0, 102, 102));
         btnDepositeSearchClear.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnDepositeSearchClear.setForeground(new java.awt.Color(255, 255, 255));
         btnDepositeSearchClear.setText("CLEAR");
 
+        pnlConfirmDepositeDetail.setVisible(false);
         pnlConfirmDepositeDetail.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel16.setBackground(new java.awt.Color(0, 102, 102));
@@ -2732,6 +2740,11 @@ public class Dashboard extends javax.swing.JFrame {
         btnDepositeConfirmAccount.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnDepositeConfirmAccount.setForeground(new java.awt.Color(255, 255, 255));
         btnDepositeConfirmAccount.setText("CONFIRM A/C");
+        btnDepositeConfirmAccount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDepositeConfirmAccountActionPerformed(evt);
+            }
+        });
 
         btnDepositeConfirmCancel.setBackground(new java.awt.Color(0, 102, 102));
         btnDepositeConfirmCancel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -2803,7 +2816,8 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGap(37, 37, 37))
         );
 
-        jPanel17.setBackground(new java.awt.Color(255, 255, 255));
+        pnlDepositeAmount.setVisible(false);
+        pnlDepositeAmount.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel18.setBackground(new java.awt.Color(0, 102, 102));
 
@@ -2829,28 +2843,33 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel52.setText("ENTER AMOUNT :");
+        lblDepositeEnterAmount.setText("ENTER AMOUNT :");
 
         btnDepositeAmount.setBackground(new java.awt.Color(0, 102, 102));
         btnDepositeAmount.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnDepositeAmount.setForeground(new java.awt.Color(255, 255, 255));
         btnDepositeAmount.setText("DEPOSITE");
+        btnDepositeAmount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDepositeAmountActionPerformed(evt);
+            }
+        });
 
         btnDepositeAmountCancel.setBackground(new java.awt.Color(0, 102, 102));
         btnDepositeAmountCancel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnDepositeAmountCancel.setForeground(new java.awt.Color(255, 255, 255));
         btnDepositeAmountCancel.setText("CANCEL");
 
-        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
-        jPanel17.setLayout(jPanel17Layout);
-        jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlDepositeAmountLayout = new javax.swing.GroupLayout(pnlDepositeAmount);
+        pnlDepositeAmount.setLayout(pnlDepositeAmountLayout);
+        pnlDepositeAmountLayout.setHorizontalGroup(
+            pnlDepositeAmountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel17Layout.createSequentialGroup()
+            .addGroup(pnlDepositeAmountLayout.createSequentialGroup()
                 .addGap(154, 154, 154)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel17Layout.createSequentialGroup()
+                .addGroup(pnlDepositeAmountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblDepositeEnterAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlDepositeAmountLayout.createSequentialGroup()
                         .addComponent(txtDepositeAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(119, 119, 119)
                         .addComponent(btnDepositeAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2858,14 +2877,14 @@ public class Dashboard extends javax.swing.JFrame {
                         .addComponent(btnDepositeAmountCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
+        pnlDepositeAmountLayout.setVerticalGroup(
+            pnlDepositeAmountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDepositeAmountLayout.createSequentialGroup()
                 .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
-                .addComponent(jLabel52)
+                .addComponent(lblDepositeEnterAmount)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnlDepositeAmountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtDepositeAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnDepositeAmount)
                     .addComponent(btnDepositeAmountCancel))
@@ -2889,7 +2908,7 @@ public class Dashboard extends javax.swing.JFrame {
                         .addGap(39, 39, 39)
                         .addComponent(btnDepositeSearchClear, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlDepositeAmount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnlDepositeLayout.setVerticalGroup(
             pnlDepositeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2905,7 +2924,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGap(66, 66, 66)
                 .addComponent(pnlConfirmDepositeDetail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlDepositeAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 635, Short.MAX_VALUE))
         );
 
@@ -3603,46 +3622,49 @@ public class Dashboard extends javax.swing.JFrame {
         btnDepositeSearchClear1.setForeground(new java.awt.Color(255, 255, 255));
         btnDepositeSearchClear1.setText("CLEAR");
 
-        pnlTransactionHistory.setBackground(new java.awt.Color(255, 255, 255));
+        scrollPanelTransactionTable.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
-        jPanel33.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel27.setBackground(new java.awt.Color(0, 102, 102));
 
-        jLabel71.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel71.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel71.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel71.setText("TRANSACTION'S");
+        jLabel68.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel68.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel68.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel68.setText("TRANSACTION");
 
-        javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
-        jPanel33.setLayout(jPanel33Layout);
-        jPanel33Layout.setHorizontalGroup(
-            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel71, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel33Layout.setVerticalGroup(
-            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel33Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
+        jPanel27.setLayout(jPanel27Layout);
+        jPanel27Layout.setHorizontalGroup(
+            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel27Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel71, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE)
+                .addComponent(jLabel68, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel27Layout.setVerticalGroup(
+            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel27Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel68, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jLabel72.setText("ACCOUNT HOLDER      :");
-
-        jLabel73.setText("AADHAR NUMBER        :");
-
-        lblWithdrawSetAadharNo3.setText("jLabel47");
+        jLabel71.setText("ACCOUNT HOLDER      :");
 
         lblWithdrawSetAccountHolderName3.setText("jLabel47");
 
-        jLabel74.setText("MOBILE NUMBER     :");
+        lblWithdrawSetAadharNo3.setText("jLabel47");
+
+        jLabel72.setText("AADHAR NUMBER        :");
+
+        jLabel73.setText("MOBILE NUMBER     :");
 
         lblWithdrawSetMobileNo3.setText("jLabel47");
 
         lblWithdrawSetBalance3.setText("jLabel47");
 
-        jLabel75.setText("BALANCE                   :");
+        jLabel74.setText("BALANCE                   :");
 
-        tableTransaction.setModel(new javax.swing.table.DefaultTableModel(
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null},
@@ -3661,60 +3683,59 @@ public class Dashboard extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tableTransaction);
+        jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout pnlTransactionHistoryLayout = new javax.swing.GroupLayout(pnlTransactionHistory);
         pnlTransactionHistory.setLayout(pnlTransactionHistoryLayout);
         pnlTransactionHistoryLayout.setHorizontalGroup(
             pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(pnlTransactionHistoryLayout.createSequentialGroup()
-                .addGap(127, 127, 127)
+                .addGap(120, 120, 120)
+                .addGroup(pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel72)
+                    .addComponent(jLabel71))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlTransactionHistoryLayout.createSequentialGroup()
-                        .addComponent(jLabel72)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblWithdrawSetAccountHolderName3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlTransactionHistoryLayout.createSequentialGroup()
-                        .addComponent(jLabel73)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblWithdrawSetAadharNo3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(129, 129, 129)
+                    .addComponent(lblWithdrawSetAccountHolderName3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblWithdrawSetAadharNo3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(115, 115, 115)
                 .addGroup(pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlTransactionHistoryLayout.createSequentialGroup()
                         .addComponent(jLabel74)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblWithdrawSetMobileNo3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblWithdrawSetBalance3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnlTransactionHistoryLayout.createSequentialGroup()
-                        .addComponent(jLabel75)
+                        .addComponent(jLabel73)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblWithdrawSetBalance3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lblWithdrawSetMobileNo3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTransactionHistoryLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
+            .addGroup(pnlTransactionHistoryLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 76, Short.MAX_VALUE))
         );
         pnlTransactionHistoryLayout.setVerticalGroup(
             pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlTransactionHistoryLayout.createSequentialGroup()
-                .addComponent(jPanel33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
+                .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(77, 77, 77)
                 .addGroup(pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel74)
-                    .addComponent(jLabel72)
+                    .addComponent(jLabel71)
                     .addComponent(lblWithdrawSetAccountHolderName3)
+                    .addComponent(jLabel73)
                     .addComponent(lblWithdrawSetMobileNo3))
                 .addGap(18, 18, 18)
                 .addGroup(pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel73)
-                    .addComponent(jLabel75)
+                    .addComponent(jLabel72)
                     .addComponent(lblWithdrawSetAadharNo3)
+                    .addComponent(jLabel74)
                     .addComponent(lblWithdrawSetBalance3))
-                .addGap(56, 56, 56)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 473, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(192, 192, 192))
         );
+
+        scrollPanelTransactionTable.setViewportView(pnlTransactionHistory);
 
         javax.swing.GroupLayout pnlStatementLayout = new javax.swing.GroupLayout(pnlStatement);
         pnlStatement.setLayout(pnlStatementLayout);
@@ -3722,17 +3743,21 @@ public class Dashboard extends javax.swing.JFrame {
             pnlStatementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(pnlStatementLayout.createSequentialGroup()
-                .addGap(191, 191, 191)
                 .addGroup(pnlStatementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnlStatementLayout.createSequentialGroup()
-                        .addComponent(txtDepositeAccountNumber1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(119, 119, 119)
-                        .addComponent(btnDepositeAccountNo1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39)
-                        .addComponent(btnDepositeSearchClear1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(191, 191, 191)
+                        .addGroup(pnlStatementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnlStatementLayout.createSequentialGroup()
+                                .addComponent(txtDepositeAccountNumber1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(119, 119, 119)
+                                .addComponent(btnDepositeAccountNo1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(39, 39, 39)
+                                .addComponent(btnDepositeSearchClear1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(pnlStatementLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(scrollPanelTransactionTable, javax.swing.GroupLayout.PREFERRED_SIZE, 1215, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(pnlTransactionHistory, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnlStatementLayout.setVerticalGroup(
             pnlStatementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3745,9 +3770,9 @@ public class Dashboard extends javax.swing.JFrame {
                     .addComponent(txtDepositeAccountNumber1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnDepositeAccountNo1)
                     .addComponent(btnDepositeSearchClear1))
-                .addGap(66, 66, 66)
-                .addComponent(pnlTransactionHistory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 323, Short.MAX_VALUE))
+                .addGap(67, 67, 67)
+                .addComponent(scrollPanelTransactionTable, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 557, Short.MAX_VALUE))
         );
 
         tabTransactionPanel.addTab("tab4", pnlStatement);
@@ -4181,6 +4206,51 @@ public class Dashboard extends javax.swing.JFrame {
         tabTransactionPanel.setSelectedIndex(3);
     }//GEN-LAST:event_lblStatementMouseClickMouseClicked
 
+    private void btnDepositeAccountNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDepositeAccountNoActionPerformed
+        // TODO add your handling code here:
+        
+        String accountNo = txtDepositeAccountNumber.getText();
+        
+        if(accountNo.length() == 14){
+
+            ResultSet resultSetDeposite = new AccountAvailableClass().accountAvailable(accountNo);
+
+            if(resultSetDeposite != null){
+                pnlConfirmDepositeDetail.setVisible(true);
+                try {
+                    lblDepositeSetAccountHolderName.setText(resultSetDeposite.getString(1) + " " + resultSetDeposite.getString(2) + " " + resultSetDeposite.getString(3));
+                    lblDepositeSetAadharNo.setText(resultSetDeposite.getString(14));
+                    lblDepositeSetMobileNo.setText(resultSetDeposite.getString(6));
+                    lblDepositeSetBalance.setText(resultSetDeposite.getString(16));
+                } catch (SQLException ex) {
+                    Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }else{
+                JOptionPane.showMessageDialog(null, "Account Not Found !!! ");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Please enter Valid Account Number ... !!!");
+        }
+        
+    }//GEN-LAST:event_btnDepositeAccountNoActionPerformed
+
+    private void btnDepositeConfirmAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDepositeConfirmAccountActionPerformed
+      pnlDepositeAmount.setVisible(true);
+    }//GEN-LAST:event_btnDepositeConfirmAccountActionPerformed
+
+    private void btnDepositeAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDepositeAmountActionPerformed
+        // TODO add your handling code here:
+        
+      String amount = txtDepositeAmount.getText();
+      boolean flag = new OpenAccountModel().setBalance(amount, txtDepositeAmount);
+      
+      if(flag)
+      {
+          new DepositeCash(lblDepositeSetBalance.getText(), txtDepositeAmount.getText(), txtDepositeAccountNumber.getText());
+          JOptionPane.showMessageDialog(null, "Deposite Cash To Your Account Successfully ... !!!");
+      }
+    }//GEN-LAST:event_btnDepositeAmountActionPerformed
+
     public void resetPersonalInfoCode(){
           txtFirstName.setText("");
           txtMiddleName.setText("");
@@ -4374,7 +4444,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
@@ -4399,7 +4468,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
-    private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
@@ -4410,7 +4478,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
@@ -4422,12 +4489,10 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel25;
     private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
-    private javax.swing.JPanel jPanel28;
     private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel31;
-    private javax.swing.JPanel jPanel33;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -4435,6 +4500,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JPanel jpAdvertiseManage;
     private javax.swing.JPanel jplMarqueeWelcome;
     private javax.swing.JPanel jpnAttention;
@@ -4474,6 +4540,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel lblCloseState;
     private javax.swing.JLabel lblDOB;
     private javax.swing.JLabel lblDateReq;
+    private javax.swing.JLabel lblDepositeEnterAmount;
     private javax.swing.JLabel lblDepositeMouseClick;
     private javax.swing.JLabel lblDepositeSetAadharNo;
     private javax.swing.JLabel lblDepositeSetAccountHolderName;
@@ -4581,6 +4648,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel pnlConfirmDepositeDetail2;
     private javax.swing.JPanel pnlConfirmDepositeDetail3;
     private javax.swing.JPanel pnlDeposite;
+    private javax.swing.JPanel pnlDepositeAmount;
     private javax.swing.JPanel pnlDepositeLable;
     private javax.swing.JPanel pnlFORAccountDetails;
     private javax.swing.JPanel pnlHeadingTransaction;
@@ -4603,12 +4671,12 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JRadioButton radioBtnOther;
     private javax.swing.ButtonGroup radioGroupGender;
     private javax.swing.JScrollPane scrollPanelTransaction;
+    private javax.swing.JScrollPane scrollPanelTransactionTable;
     private javax.swing.JScrollPane scrollpaneAccountMain;
     private javax.swing.JScrollPane spHomePage;
     private com.yogesh.tabpanel.TabbedPaneCustom tabCustomAccountManage;
     private com.yogesh.tabpanel.TabbedPaneCustom tabCustomMenu;
     private javax.swing.JTabbedPane tabTransactionPanel;
-    private javax.swing.JTable tableTransaction;
     private javax.swing.JTextField txtAadhar;
     private javax.swing.JTextField txtAccountNo;
     private javax.swing.JTextField txtAccountNoClose;
