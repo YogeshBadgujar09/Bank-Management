@@ -339,7 +339,7 @@ public class OpenAccountModel {
 
     public boolean setBalance(String balance, JTextField txtBalance) {
         
-        pattern =  Pattern.compile("^[0-9]{4,}$");
+        pattern =  Pattern.compile("^[0-9]{1,}$");
         matcher =  pattern.matcher(balance);
             
             if(matcher.matches())
@@ -347,7 +347,7 @@ public class OpenAccountModel {
                 this.balance = balance;
                 return true;
             }else{
-                JOptionPane.showMessageDialog(null,"Deposite MINIMUM 1000rs.");
+             //   JOptionPane.showMessageDialog(null," ........ !!!");
                // System.out.println("Enter Minimun 1000 Rs.");
                 txtBalance.requestFocus();
                 txtBalance.setText("");

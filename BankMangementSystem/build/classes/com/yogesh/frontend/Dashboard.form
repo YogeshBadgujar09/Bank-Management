@@ -4528,7 +4528,7 @@
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="pnlConfirmWithdrawDetail" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jPanel21" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pnlWithdrawAmount" alignment="0" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
@@ -4547,7 +4547,7 @@
                                       <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                                       <Component id="pnlConfirmWithdrawDetail" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jPanel21" min="-2" max="-2" attributes="0"/>
+                                      <Component id="pnlWithdrawAmount" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace pref="689" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -4633,6 +4633,9 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="CLEAR"/>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnWithdrawSearchClearActionPerformed"/>
+                              </Events>
                             </Component>
                             <Container class="javax.swing.JPanel" name="pnlConfirmWithdrawDetail">
                               <Properties>
@@ -4788,6 +4791,9 @@
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="CONFIRM A/C"/>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnWithdrawConfirmAccountActionPerformed"/>
+                                  </Events>
                                 </Component>
                                 <Component class="javax.swing.JButton" name="btnWithdrawConfirmCancel">
                                   <Properties>
@@ -4802,6 +4808,9 @@
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="CANCEL"/>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnWithdrawConfirmCancelActionPerformed"/>
+                                  </Events>
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="lblWithdrawSetAccountHolderName">
                                   <Properties>
@@ -4825,12 +4834,15 @@
                                 </Component>
                               </SubComponents>
                             </Container>
-                            <Container class="javax.swing.JPanel" name="jPanel21">
+                            <Container class="javax.swing.JPanel" name="pnlWithdrawAmount">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                               </Properties>
+                              <AuxValues>
+                                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="pnlWithdrawAmount.setVisible(false);"/>
+                              </AuxValues>
 
                               <Layout>
                                 <DimensionLayout dim="0">
@@ -4932,6 +4944,9 @@
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="WITHDRAW"/>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnWithdrawAmountActionPerformed"/>
+                                  </Events>
                                 </Component>
                                 <Component class="javax.swing.JButton" name="btnWithdrawAmountCancel">
                                   <Properties>
@@ -4946,6 +4961,9 @@
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="CANCEL"/>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnWithdrawAmountCancelActionPerformed"/>
+                                  </Events>
                                 </Component>
                               </SubComponents>
                             </Container>
