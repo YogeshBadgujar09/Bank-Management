@@ -115,9 +115,9 @@ public class OpenAccount {
         }
      }
     
-    public boolean initialBalance(OpenAccountModel openAccountModel ,String balance , JTextField txtBalance)
-    {
-          boolean validation = openAccountModel.setBalance(balance, txtBalance); 
-          return validation;
-    }
+//    public boolean initialBalance(OpenAccountModel openAccountModel ,String balance , JTextField txtBalance)
+//    {
+//          boolean validation = openAccountModel.setBalance(balance, txtBalance); 
+//          return validation;
+//    }
 }

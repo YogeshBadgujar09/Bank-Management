@@ -4098,55 +4098,68 @@ public class Dashboard extends javax.swing.JFrame {
     private void btnCreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAccountActionPerformed
 
         String balance = txtBalance.getText();
-        boolean balanceValidation = new OpenAccount().initialBalance(openAccountModel, balance, txtBalance);
+//      boolean balanceValidation = new OpenAccount().initialBalance(openAccountModel, balance, txtBalance);
 
-        //Openning date of Account convert in string format
-        Date date = new Date();
-        SimpleDateFormat simpleDateFormat= new SimpleDateFormat("dd-MM-YYYY");
-        String formatedDate = simpleDateFormat.format(date);
+        boolean balanceValidation = new OpenAccountModel().setBalance(balance, txtBalance);
+        
+        if(Integer.parseInt(balance) >= 1000){
+            
+                    //Openning date of Account convert in string format
+                    Date date = new Date();
+                    SimpleDateFormat simpleDateFormat= new SimpleDateFormat("dd-MM-YYYY");
+                    String formatedDate = simpleDateFormat.format(date);
 
-        GlobalDatabase.createConnection();
+                    GlobalDatabase.createConnection();
 
-        if(balanceValidation)
-        {
-            GlobalDatabase.nonSelectQuery(openAccountModel.getFirstName(),
-                openAccountModel.getMiddleName(),
-                openAccountModel.getLastName(),
-                openAccountModel.getDateOfBirth(),
-                openAccountModel.getGender(),
-                openAccountModel.getMobileNo(),
-                openAccountModel.getEmail(),
-                openAccountModel.getAddress(),
-                openAccountModel.getCity(),
-                openAccountModel.getDivision(),
-                openAccountModel.getDistrict(),
-                openAccountModel.getPinCode(),
-                openAccountModel.getState(),
-                openAccountModel.getAadharNumber(),
-                openAccountModel.getAccountNumber(),
-                openAccountModel.getBalance(),
-                formatedDate
-            );
+                    if(balanceValidation)
+                    {
+                        GlobalDatabase.nonSelectQuery(openAccountModel.getFirstName(),
+                            openAccountModel.getMiddleName(),
+                            openAccountModel.getLastName(),
+                            openAccountModel.getDateOfBirth(),
+                            openAccountModel.getGender(),
+                            openAccountModel.getMobileNo(),
+                            openAccountModel.getEmail(),
+                            openAccountModel.getAddress(),
+                            openAccountModel.getCity(),
+                            openAccountModel.getDivision(),
+                            openAccountModel.getDistrict(),
+                            openAccountModel.getPinCode(),
+                            openAccountModel.getState(),
+                            openAccountModel.getAadharNumber(),
+                            openAccountModel.getAccountNumber(),
+                            openAccountModel.getBalance(),
+                            formatedDate
+                        );
 
-            String accountNo = openAccountModel.getAccountNumber();
-            balance = openAccountModel.getBalance();
-            String particulars = "INITIAL AMOUNT - TO CASH";
-            String withdrawAmount = " ";
+                        String accountNo = openAccountModel.getAccountNumber();
+                        balance = openAccountModel.getBalance();
+                        String particulars = "INITIAL AMOUNT - TO CASH";
+                        String withdrawAmount = " ";
 
-            new TransactionTracking( accountNo ,particulars, withdrawAmount ,balance, balance);
+                        new TransactionTracking( accountNo ,particulars, withdrawAmount ,balance, balance);
 
-            JOptionPane.showMessageDialog(null, "Acount Open Successfully \n NOTE YOUR ACCOUNT NO :" + openAccountModel.getAccountNumber());
+                        JOptionPane.showMessageDialog(null, "Acount Open Successfully \n NOTE YOUR ACCOUNT NO :" + openAccountModel.getAccountNumber());
 
-            pnlInitialBalance.setVisible(false);
-            pnlAccountInformation.setVisible(false);
-            resetPersonalInfoCode();
+                        pnlInitialBalance.setVisible(false);
+                        pnlAccountInformation.setVisible(false);
+                        resetPersonalInfoCode();
 
+                    }
+                    else{
+                        JOptionPane.showMessageDialog(null, "Please enter all requird fields .... !!!");
+                    }
+                    openAccountModel = null ;
+                    
+                    GlobalDatabase.closeConnection();
+            
+        
+        }else{      
+            JOptionPane.showMessageDialog(null, "Enter MINIMUM 1000Rs. To Open Account \n \t\t\t OR \n Enter Valid Amount ... !!!");
         }
-        else{
-            JOptionPane.showMessageDialog(null, "Please enter all requird fields .... !!!");
-        }
-        openAccountModel = null ;
-        GlobalDatabase.closeConnection();
+            
+        
+        
     }//GEN-LAST:event_btnCreateAccountActionPerformed
 
     private void btnNextForIntialBalanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextForIntialBalanceActionPerformed

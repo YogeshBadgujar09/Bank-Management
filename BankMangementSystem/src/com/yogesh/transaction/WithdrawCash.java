@@ -16,7 +16,7 @@ public class WithdrawCash {
             int withdraAmount  = Integer.parseInt(withdrawAmount);
            
             
-            if(balance > 0 && withdraAmount < balance ){
+            if(balance > 0 && withdraAmount <= balance ){
                 
                 balance = balance - withdraAmount ;
                 GlobalDatabase.nonSelectQuery("UPDATE account SET balance='"+ balance +"' Where accountno = '"+ accountNo +"'");
