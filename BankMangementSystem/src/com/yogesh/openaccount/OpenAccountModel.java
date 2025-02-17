@@ -341,13 +341,13 @@ public class OpenAccountModel {
         
         pattern =  Pattern.compile("^[0-9]{1,}$");
         matcher =  pattern.matcher(balance);
-            
+
             if(matcher.matches())
             {
                 this.balance = balance;
                 return true;
             }else{
-             //   JOptionPane.showMessageDialog(null," ........ !!!");
+                JOptionPane.showMessageDialog(null,"Enter Valid Amount ... !!!");
                // System.out.println("Enter Minimun 1000 Rs.");
                 txtBalance.requestFocus();
                 txtBalance.setText("");

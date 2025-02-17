@@ -1700,9 +1700,9 @@
                                                   <Component id="txtBalance" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="lblBalanceReq" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="btnCreateAccount" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace pref="29" max="32767" attributes="0"/>
+                                              <EmptySpace pref="35" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -4982,22 +4982,22 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jPanel23" max="32767" attributes="0"/>
-                                  <Component id="pnlConfirmDepositeDetail2" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pnlConfirmSenderDetail" alignment="0" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="191" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="lblAccountNumber1" pref="200" max="32767" attributes="0"/>
-                                          <Component id="txtWithdrawAccountNumber1" max="32767" attributes="0"/>
+                                          <Component id="txtSenderAccountNumber" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
-                                      <Component id="btnWithdrawAccountNo1" min="-2" pref="98" max="-2" attributes="0"/>
+                                      <Component id="btnSenderAccountNo" min="-2" pref="98" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                                      <Component id="btnWithdrawSearchClear1" min="-2" pref="98" max="-2" attributes="0"/>
+                                      <Component id="btnSenderSearchClear" min="-2" pref="98" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="jPanel25" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="pnlConfirmDepositeDetail3" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jPanel29" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pnlConfirmReceiverDetail" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pnlTransferAmount" alignment="0" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
@@ -5009,19 +5009,19 @@
                                       <Component id="lblAccountNumber1" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="txtWithdrawAccountNumber1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="btnWithdrawAccountNo1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="btnWithdrawSearchClear1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtSenderAccountNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnSenderAccountNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnSenderSearchClear" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-                                      <Component id="pnlConfirmDepositeDetail2" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="pnlConfirmSenderDetail" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="jPanel25" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="pnlConfirmDepositeDetail3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="pnlConfirmReceiverDetail" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jPanel29" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="292" max="32767" attributes="0"/>
+                                      <Component id="pnlTransferAmount" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="430" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -5069,14 +5069,14 @@
                                 </Component>
                               </SubComponents>
                             </Container>
-                            <Component class="javax.swing.JTextField" name="txtWithdrawAccountNumber1">
+                            <Component class="javax.swing.JTextField" name="txtSenderAccountNumber">
                             </Component>
                             <Component class="javax.swing.JLabel" name="lblAccountNumber1">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="SENDER ACCOUNT NUMBER "/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JButton" name="btnWithdrawAccountNo1">
+                            <Component class="javax.swing.JButton" name="btnSenderAccountNo">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="66" green="66" red="0" type="rgb"/>
@@ -5089,8 +5089,11 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="SEARCH A/C"/>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSenderAccountNoActionPerformed"/>
+                              </Events>
                             </Component>
-                            <Component class="javax.swing.JButton" name="btnWithdrawSearchClear1">
+                            <Component class="javax.swing.JButton" name="btnSenderSearchClear">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="66" green="66" red="0" type="rgb"/>
@@ -5104,12 +5107,15 @@
                                 <Property name="text" type="java.lang.String" value="CLEAR"/>
                               </Properties>
                             </Component>
-                            <Container class="javax.swing.JPanel" name="pnlConfirmDepositeDetail2">
+                            <Container class="javax.swing.JPanel" name="pnlConfirmSenderDetail">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                               </Properties>
+                              <AuxValues>
+                                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="pnlConfirmSenderDetail.setVisible(false);"/>
+                              </AuxValues>
 
                               <Layout>
                                 <DimensionLayout dim="0">
@@ -5121,12 +5127,12 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel59" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="lblWithdrawSetAccountHolderName1" min="-2" pref="300" max="-2" attributes="0"/>
+                                                  <Component id="lblSenderSetAccountHolderName" min="-2" pref="300" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel60" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="lblWithdrawSetAadharNo1" min="-2" pref="300" max="-2" attributes="0"/>
+                                                  <Component id="lblSenderSetAadharNo" min="-2" pref="300" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
@@ -5134,22 +5140,15 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel61" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="lblWithdrawSetMobileNo1" min="-2" pref="300" max="-2" attributes="0"/>
+                                                  <Component id="lblSenderSetMobileNo" min="-2" pref="300" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel62" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="lblWithdrawSetBalance1" min="-2" pref="300" max="-2" attributes="0"/>
+                                                  <Component id="lblSenderSetBalance" min="-2" pref="300" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace pref="244" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="btnWithdrawConfirmAccount1" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-                                          <Component id="btnWithdrawConfirmCancel1" min="-2" pref="100" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="518" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -5157,26 +5156,21 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jPanel24" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace pref="42" max="32767" attributes="0"/>
+                                          <EmptySpace pref="30" max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLabel61" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel59" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblWithdrawSetAccountHolderName1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblWithdrawSetMobileNo1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblSenderSetAccountHolderName" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblSenderSetMobileNo" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLabel60" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel62" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblWithdrawSetAadharNo1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblWithdrawSetBalance1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblSenderSetAadharNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblSenderSetBalance" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="btnWithdrawConfirmCancel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="btnWithdrawConfirmAccount1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -5242,50 +5236,22 @@
                                     <Property name="text" type="java.lang.String" value="BALANCE                   :"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JButton" name="btnWithdrawConfirmAccount1">
-                                  <Properties>
-                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="66" green="66" red="0" type="rgb"/>
-                                    </Property>
-                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Segoe UI" size="12" style="1"/>
-                                    </Property>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
-                                    <Property name="text" type="java.lang.String" value="CONFIRM A/C"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JButton" name="btnWithdrawConfirmCancel1">
-                                  <Properties>
-                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="66" green="66" red="0" type="rgb"/>
-                                    </Property>
-                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Segoe UI" size="12" style="1"/>
-                                    </Property>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
-                                    <Property name="text" type="java.lang.String" value="CANCEL"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JLabel" name="lblWithdrawSetAccountHolderName1">
+                                <Component class="javax.swing.JLabel" name="lblSenderSetAccountHolderName">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="jLabel47"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="lblWithdrawSetAadharNo1">
+                                <Component class="javax.swing.JLabel" name="lblSenderSetAadharNo">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="jLabel47"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="lblWithdrawSetMobileNo1">
+                                <Component class="javax.swing.JLabel" name="lblSenderSetMobileNo">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="jLabel47"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="lblWithdrawSetBalance1">
+                                <Component class="javax.swing.JLabel" name="lblSenderSetBalance">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="jLabel47"/>
                                   </Properties>
@@ -5306,11 +5272,11 @@
                                           <EmptySpace min="-2" pref="191" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
-                                                  <Component id="txtWithdrawAccountNumber2" min="-2" pref="200" max="-2" attributes="0"/>
+                                                  <Component id="txtReceiverAccountNumber" min="-2" pref="200" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
-                                                  <Component id="btnWithdrawAccountNo2" min="-2" pref="98" max="-2" attributes="0"/>
+                                                  <Component id="btnReceiverAccountNo" min="-2" pref="98" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                                                  <Component id="btnWithdrawSearchClear2" min="-2" pref="98" max="-2" attributes="0"/>
+                                                  <Component id="btnReceiverSearchClear" min="-2" pref="98" max="-2" attributes="0"/>
                                                   <EmptySpace max="32767" attributes="0"/>
                                               </Group>
                                               <Group type="102" attributes="0">
@@ -5328,9 +5294,9 @@
                                           <Component id="lblAccountNumber2" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="txtWithdrawAccountNumber2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="btnWithdrawAccountNo2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="btnWithdrawSearchClear2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtReceiverAccountNumber" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btnReceiverAccountNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btnReceiverSearchClear" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace pref="61" max="32767" attributes="0"/>
                                       </Group>
@@ -5343,9 +5309,9 @@
                                     <Property name="text" type="java.lang.String" value="RECEIVER ACCOUNT NUMBER "/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="txtWithdrawAccountNumber2">
+                                <Component class="javax.swing.JTextField" name="txtReceiverAccountNumber">
                                 </Component>
-                                <Component class="javax.swing.JButton" name="btnWithdrawAccountNo2">
+                                <Component class="javax.swing.JButton" name="btnReceiverAccountNo">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="66" green="66" red="0" type="rgb"/>
@@ -5358,8 +5324,11 @@
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="SEARCH A/C"/>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReceiverAccountNoActionPerformed"/>
+                                  </Events>
                                 </Component>
-                                <Component class="javax.swing.JButton" name="btnWithdrawSearchClear2">
+                                <Component class="javax.swing.JButton" name="btnReceiverSearchClear">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="66" green="66" red="0" type="rgb"/>
@@ -5375,12 +5344,15 @@
                                 </Component>
                               </SubComponents>
                             </Container>
-                            <Container class="javax.swing.JPanel" name="pnlConfirmDepositeDetail3">
+                            <Container class="javax.swing.JPanel" name="pnlConfirmReceiverDetail">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                               </Properties>
+                              <AuxValues>
+                                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="pnlConfirmReceiverDetail.setVisible(false);"/>
+                              </AuxValues>
 
                               <Layout>
                                 <DimensionLayout dim="0">
@@ -5392,12 +5364,12 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel64" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="lblWithdrawSetAccountHolderName2" min="-2" pref="300" max="-2" attributes="0"/>
+                                                  <Component id="lblReceiverSetAccountHolderName" min="-2" pref="300" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel65" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="lblWithdrawSetAadharNo2" min="-2" pref="300" max="-2" attributes="0"/>
+                                                  <Component id="lblReceiverSetAadharNo" min="-2" pref="300" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
@@ -5405,22 +5377,15 @@
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel66" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="lblWithdrawSetMobileNo2" min="-2" pref="300" max="-2" attributes="0"/>
+                                                  <Component id="lblReceiverSetMobileNo" min="-2" pref="300" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="jLabel67" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
-                                                  <Component id="lblWithdrawSetBalance2" min="-2" pref="300" max="-2" attributes="0"/>
+                                                  <Component id="lblReceiverSetBalance" min="-2" pref="300" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace pref="244" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="btnWithdrawConfirmAccount2" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                                          <Component id="btnWithdrawConfirmCancel2" min="-2" pref="100" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="581" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -5432,22 +5397,17 @@
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLabel66" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel64" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblWithdrawSetAccountHolderName2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblWithdrawSetMobileNo2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblReceiverSetAccountHolderName" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblReceiverSetMobileNo" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLabel65" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel67" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblWithdrawSetAadharNo2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lblWithdrawSetBalance2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblReceiverSetAadharNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblReceiverSetBalance" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="btnWithdrawConfirmCancel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="btnWithdrawConfirmAccount2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -5513,62 +5473,37 @@
                                     <Property name="text" type="java.lang.String" value="BALANCE                   :"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JButton" name="btnWithdrawConfirmAccount2">
-                                  <Properties>
-                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="66" green="66" red="0" type="rgb"/>
-                                    </Property>
-                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Segoe UI" size="12" style="1"/>
-                                    </Property>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
-                                    <Property name="text" type="java.lang.String" value="CONFIRM A/C"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JButton" name="btnWithdrawConfirmCancel2">
-                                  <Properties>
-                                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="66" green="66" red="0" type="rgb"/>
-                                    </Property>
-                                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                      <Font name="Segoe UI" size="12" style="1"/>
-                                    </Property>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
-                                    <Property name="text" type="java.lang.String" value="CANCEL"/>
-                                  </Properties>
-                                </Component>
-                                <Component class="javax.swing.JLabel" name="lblWithdrawSetAccountHolderName2">
+                                <Component class="javax.swing.JLabel" name="lblReceiverSetAccountHolderName">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="jLabel47"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="lblWithdrawSetAadharNo2">
+                                <Component class="javax.swing.JLabel" name="lblReceiverSetAadharNo">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="jLabel47"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="lblWithdrawSetMobileNo2">
+                                <Component class="javax.swing.JLabel" name="lblReceiverSetMobileNo">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="jLabel47"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="lblWithdrawSetBalance2">
+                                <Component class="javax.swing.JLabel" name="lblReceiverSetBalance">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="jLabel47"/>
                                   </Properties>
                                 </Component>
                               </SubComponents>
                             </Container>
-                            <Container class="javax.swing.JPanel" name="jPanel29">
+                            <Container class="javax.swing.JPanel" name="pnlTransferAmount">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                                 </Property>
                               </Properties>
+                              <AuxValues>
+                                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="pnlTransferAmount.setVisible(false);"/>
+                              </AuxValues>
 
                               <Layout>
                                 <DimensionLayout dim="0">
@@ -5579,11 +5514,11 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jLabel70" alignment="0" min="-2" pref="150" max="-2" attributes="0"/>
                                               <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="txtWithdrawAmount1" min="-2" pref="200" max="-2" attributes="0"/>
+                                                  <Component id="txtTransferAmount" min="-2" pref="200" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
-                                                  <Component id="btnWithdrawAmount1" min="-2" pref="104" max="-2" attributes="0"/>
+                                                  <Component id="btnTransferAmount" min="-2" pref="104" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                                                  <Component id="btnWithdrawAmountCancel1" min="-2" pref="100" max="-2" attributes="0"/>
+                                                  <Component id="btnTransferAmountCancel" min="-2" pref="100" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace max="32767" attributes="0"/>
@@ -5598,9 +5533,9 @@
                                           <Component id="jLabel70" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="txtWithdrawAmount1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="btnWithdrawAmount1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="btnWithdrawAmountCancel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtTransferAmount" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btnTransferAmount" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btnTransferAmountCancel" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="0" pref="81" max="32767" attributes="0"/>
                                       </Group>
@@ -5655,9 +5590,9 @@
                                     <Property name="text" type="java.lang.String" value="ENTER AMOUNT :"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="txtWithdrawAmount1">
+                                <Component class="javax.swing.JTextField" name="txtTransferAmount">
                                 </Component>
-                                <Component class="javax.swing.JButton" name="btnWithdrawAmount1">
+                                <Component class="javax.swing.JButton" name="btnTransferAmount">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="66" green="66" red="0" type="rgb"/>
@@ -5670,8 +5605,11 @@
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="TRANSFER"/>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTransferAmountActionPerformed"/>
+                                  </Events>
                                 </Component>
-                                <Component class="javax.swing.JButton" name="btnWithdrawAmountCancel1">
+                                <Component class="javax.swing.JButton" name="btnTransferAmountCancel">
                                   <Properties>
                                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                       <Color blue="66" green="66" red="0" type="rgb"/>

@@ -32,7 +32,7 @@ public class OpenAccount {
           //  System.out.println("aadhar :");
           //  openAccountModel.setAadharNumber(scanner.next(),scanner);
            boolean validAadharNo = openAccountModel.setAadharNumber(aadharNo,txtAadhar);
-            String aadhar = openAccountModel.getAadharNumber();
+           String aadhar = openAccountModel.getAadharNumber();
             
             if(validAadharNo){
                 
