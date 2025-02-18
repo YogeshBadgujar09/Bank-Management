@@ -21,7 +21,7 @@ public class WithdrawCash {
                 balance = balance - withdraAmount ;
                 GlobalDatabase.nonSelectQuery("UPDATE account SET balance='"+ balance +"' Where accountno = '"+ accountNo +"'");
                 
-                String particulars = "WITHDRAW - TO CASH";
+                String particulars = "CASH WITHDRAW";
                 String depositeAmount = " ";
 
                 new TransactionTracking(accountNo,particulars, String.valueOf(withdrawAmount) ,depositeAmount,String.valueOf(balance));

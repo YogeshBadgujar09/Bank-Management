@@ -23,6 +23,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -419,23 +420,24 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel31 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
-        txtDepositeAccountNumber1 = new javax.swing.JTextField();
-        btnDepositeAccountNo1 = new javax.swing.JButton();
-        btnDepositeSearchClear1 = new javax.swing.JButton();
-        scrollPanelTransactionTable = new javax.swing.JScrollPane();
-        pnlTransactionHistory = new javax.swing.JPanel();
+        txtStatementAccountNumber = new javax.swing.JTextField();
+        btnStatementAccountNo = new javax.swing.JButton();
+        btnStatementSearchClear = new javax.swing.JButton();
+        scPnlTransaction = new javax.swing.JScrollPane();
+        tblTransaction = new javax.swing.JTable();
+        pnlConfirmStatementDetail = new javax.swing.JPanel();
         jPanel27 = new javax.swing.JPanel();
         jLabel68 = new javax.swing.JLabel();
         jLabel71 = new javax.swing.JLabel();
-        lblWithdrawSetAccountHolderName3 = new javax.swing.JLabel();
-        lblWithdrawSetAadharNo3 = new javax.swing.JLabel();
+        lblStatementSetAccountHolderName = new javax.swing.JLabel();
+        lblStatementSetAadharNo = new javax.swing.JLabel();
         jLabel72 = new javax.swing.JLabel();
         jLabel73 = new javax.swing.JLabel();
-        lblWithdrawSetMobileNo3 = new javax.swing.JLabel();
-        lblWithdrawSetBalance3 = new javax.swing.JLabel();
+        lblStatementSetMobileNo = new javax.swing.JLabel();
+        lblStatementSetBalance = new javax.swing.JLabel();
         jLabel74 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        btnStatementConfirm = new javax.swing.JButton();
+        btnStatementConfirmCancel = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         jLabel1.setBackground(new java.awt.Color(0, 102, 102));
@@ -709,7 +711,7 @@ public class Dashboard extends javax.swing.JFrame {
                         .addComponent(jpnFooter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpAdvertiseManageLayout.createSequentialGroup()
-                        .addGap(0, 198, Short.MAX_VALUE)
+                        .addGap(0, 315, Short.MAX_VALUE)
                         .addGroup(jpAdvertiseManageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(pnCarLoan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(pnWhatsAppAd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2456,7 +2458,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54)
                 .addComponent(tabCustomAccountManage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 196, Short.MAX_VALUE))
+                .addGap(0, 208, Short.MAX_VALUE))
         );
         pnlAccountMainLayout.setVerticalGroup(
             pnlAccountMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3273,6 +3275,11 @@ public class Dashboard extends javax.swing.JFrame {
         btnSenderSearchClear.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnSenderSearchClear.setForeground(new java.awt.Color(255, 255, 255));
         btnSenderSearchClear.setText("CLEAR");
+        btnSenderSearchClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSenderSearchClearActionPerformed(evt);
+            }
+        });
 
         pnlConfirmSenderDetail.setVisible(false);
         pnlConfirmSenderDetail.setBackground(new java.awt.Color(255, 255, 255));
@@ -3379,6 +3386,11 @@ public class Dashboard extends javax.swing.JFrame {
         btnReceiverSearchClear.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnReceiverSearchClear.setForeground(new java.awt.Color(255, 255, 255));
         btnReceiverSearchClear.setText("CLEAR");
+        btnReceiverSearchClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReceiverSearchClearActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
         jPanel25.setLayout(jPanel25Layout);
@@ -3541,6 +3553,11 @@ public class Dashboard extends javax.swing.JFrame {
         btnTransferAmountCancel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnTransferAmountCancel.setForeground(new java.awt.Color(255, 255, 255));
         btnTransferAmountCancel.setText("CANCEL");
+        btnTransferAmountCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTransferAmountCancelActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlTransferAmountLayout = new javax.swing.GroupLayout(pnlTransferAmount);
         pnlTransferAmount.setLayout(pnlTransferAmountLayout);
@@ -3632,7 +3649,7 @@ public class Dashboard extends javax.swing.JFrame {
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel31Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, 1275, Short.MAX_VALUE)
+                .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel31Layout.setVerticalGroup(
@@ -3642,17 +3659,56 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel47.setText("ACCOUNT NUMBER ");
 
-        btnDepositeAccountNo1.setBackground(new java.awt.Color(0, 102, 102));
-        btnDepositeAccountNo1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnDepositeAccountNo1.setForeground(new java.awt.Color(255, 255, 255));
-        btnDepositeAccountNo1.setText("SEARCH A/C");
+        btnStatementAccountNo.setBackground(new java.awt.Color(0, 102, 102));
+        btnStatementAccountNo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnStatementAccountNo.setForeground(new java.awt.Color(255, 255, 255));
+        btnStatementAccountNo.setText("SEARCH A/C");
+        btnStatementAccountNo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStatementAccountNoActionPerformed(evt);
+            }
+        });
 
-        btnDepositeSearchClear1.setBackground(new java.awt.Color(0, 102, 102));
-        btnDepositeSearchClear1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnDepositeSearchClear1.setForeground(new java.awt.Color(255, 255, 255));
-        btnDepositeSearchClear1.setText("CLEAR");
+        btnStatementSearchClear.setBackground(new java.awt.Color(0, 102, 102));
+        btnStatementSearchClear.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnStatementSearchClear.setForeground(new java.awt.Color(255, 255, 255));
+        btnStatementSearchClear.setText("CLEAR");
 
-        scrollPanelTransactionTable.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        scPnlTransaction.setVisible(false);
+
+        tblTransaction.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "TRANSACTION ID", "ACCOUNT NO", "PARTICULARS", "DEBIT", "CREDIT", "STATUS", "DATE", "BALANCE"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        scPnlTransaction.setViewportView(tblTransaction);
+        if (tblTransaction.getColumnModel().getColumnCount() > 0) {
+            tblTransaction.getColumnModel().getColumn(0).setHeaderValue("TRANSACTION ID");
+            tblTransaction.getColumnModel().getColumn(1).setHeaderValue("ACCOUNT NO");
+            tblTransaction.getColumnModel().getColumn(2).setHeaderValue("PARTICULARS");
+            tblTransaction.getColumnModel().getColumn(3).setHeaderValue("DEBIT");
+            tblTransaction.getColumnModel().getColumn(4).setHeaderValue("CREDIT");
+            tblTransaction.getColumnModel().getColumn(5).setHeaderValue("STATUS");
+            tblTransaction.getColumnModel().getColumn(6).setHeaderValue("DATE");
+            tblTransaction.getColumnModel().getColumn(7).setHeaderValue("BALANCE");
+        }
+
+        pnlConfirmStatementDetail.setVisible(false);
+        pnlConfirmStatementDetail.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel27.setBackground(new java.awt.Color(0, 102, 102));
 
@@ -3680,92 +3736,90 @@ public class Dashboard extends javax.swing.JFrame {
 
         jLabel71.setText("ACCOUNT HOLDER      :");
 
-        lblWithdrawSetAccountHolderName3.setText("jLabel47");
+        lblStatementSetAccountHolderName.setText("jLabel47");
 
-        lblWithdrawSetAadharNo3.setText("jLabel47");
+        lblStatementSetAadharNo.setText("jLabel47");
 
         jLabel72.setText("AADHAR NUMBER        :");
 
         jLabel73.setText("MOBILE NUMBER     :");
 
-        lblWithdrawSetMobileNo3.setText("jLabel47");
+        lblStatementSetMobileNo.setText("jLabel47");
 
-        lblWithdrawSetBalance3.setText("jLabel47");
+        lblStatementSetBalance.setText("jLabel47");
 
         jLabel74.setText("BALANCE                   :");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "TRANSACTION ID", "ACCOUNT NO", "PARTICULARS", "DEBIT", "CREDIT", "STATUS", "DATE", "BALANCE"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+        btnStatementConfirm.setBackground(new java.awt.Color(0, 102, 102));
+        btnStatementConfirm.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnStatementConfirm.setForeground(new java.awt.Color(255, 255, 255));
+        btnStatementConfirm.setText("CONFIRM");
+        btnStatementConfirm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStatementConfirmActionPerformed(evt);
             }
         });
-        jScrollPane1.setViewportView(jTable1);
 
-        javax.swing.GroupLayout pnlTransactionHistoryLayout = new javax.swing.GroupLayout(pnlTransactionHistory);
-        pnlTransactionHistory.setLayout(pnlTransactionHistoryLayout);
-        pnlTransactionHistoryLayout.setHorizontalGroup(
-            pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        btnStatementConfirmCancel.setBackground(new java.awt.Color(0, 102, 102));
+        btnStatementConfirmCancel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnStatementConfirmCancel.setForeground(new java.awt.Color(255, 255, 255));
+        btnStatementConfirmCancel.setText("CANCEL");
+
+        javax.swing.GroupLayout pnlConfirmStatementDetailLayout = new javax.swing.GroupLayout(pnlConfirmStatementDetail);
+        pnlConfirmStatementDetail.setLayout(pnlConfirmStatementDetailLayout);
+        pnlConfirmStatementDetailLayout.setHorizontalGroup(
+            pnlConfirmStatementDetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(pnlTransactionHistoryLayout.createSequentialGroup()
-                .addGap(120, 120, 120)
-                .addGroup(pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel72)
-                    .addComponent(jLabel71))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblWithdrawSetAccountHolderName3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblWithdrawSetAadharNo3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(115, 115, 115)
-                .addGroup(pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlTransactionHistoryLayout.createSequentialGroup()
-                        .addComponent(jLabel74)
+            .addGroup(pnlConfirmStatementDetailLayout.createSequentialGroup()
+                .addGroup(pnlConfirmStatementDetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlConfirmStatementDetailLayout.createSequentialGroup()
+                        .addGap(120, 120, 120)
+                        .addGroup(pnlConfirmStatementDetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel72)
+                            .addComponent(jLabel71))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblWithdrawSetBalance3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlTransactionHistoryLayout.createSequentialGroup()
-                        .addComponent(jLabel73)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblWithdrawSetMobileNo3, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(pnlTransactionHistoryLayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 76, Short.MAX_VALUE))
+                        .addGroup(pnlConfirmStatementDetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblStatementSetAccountHolderName, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblStatementSetAadharNo, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(115, 115, 115)
+                        .addGroup(pnlConfirmStatementDetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlConfirmStatementDetailLayout.createSequentialGroup()
+                                .addComponent(jLabel74)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblStatementSetBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlConfirmStatementDetailLayout.createSequentialGroup()
+                                .addComponent(jLabel73)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblStatementSetMobileNo, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(pnlConfirmStatementDetailLayout.createSequentialGroup()
+                        .addGap(503, 503, 503)
+                        .addComponent(btnStatementConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(49, 49, 49)
+                        .addComponent(btnStatementConfirmCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
-        pnlTransactionHistoryLayout.setVerticalGroup(
-            pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlTransactionHistoryLayout.createSequentialGroup()
+        pnlConfirmStatementDetailLayout.setVerticalGroup(
+            pnlConfirmStatementDetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlConfirmStatementDetailLayout.createSequentialGroup()
                 .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77)
-                .addGroup(pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGap(53, 53, 53)
+                .addGroup(pnlConfirmStatementDetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel71)
-                    .addComponent(lblWithdrawSetAccountHolderName3)
+                    .addComponent(lblStatementSetAccountHolderName)
                     .addComponent(jLabel73)
-                    .addComponent(lblWithdrawSetMobileNo3))
+                    .addComponent(lblStatementSetMobileNo))
                 .addGap(18, 18, 18)
-                .addGroup(pnlTransactionHistoryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnlConfirmStatementDetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel72)
-                    .addComponent(lblWithdrawSetAadharNo3)
+                    .addComponent(lblStatementSetAadharNo)
                     .addComponent(jLabel74)
-                    .addComponent(lblWithdrawSetBalance3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(192, 192, 192))
+                    .addComponent(lblStatementSetBalance))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addGroup(pnlConfirmStatementDetailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnStatementConfirm)
+                    .addComponent(btnStatementConfirmCancel))
+                .addGap(34, 34, 34))
         );
-
-        scrollPanelTransactionTable.setViewportView(pnlTransactionHistory);
 
         javax.swing.GroupLayout pnlStatementLayout = new javax.swing.GroupLayout(pnlStatement);
         pnlStatement.setLayout(pnlStatementLayout);
@@ -3779,15 +3833,18 @@ public class Dashboard extends javax.swing.JFrame {
                         .addGroup(pnlStatementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(pnlStatementLayout.createSequentialGroup()
-                                .addComponent(txtDepositeAccountNumber1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtStatementAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(119, 119, 119)
-                                .addComponent(btnDepositeAccountNo1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnStatementAccountNo, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(39, 39, 39)
-                                .addComponent(btnDepositeSearchClear1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(btnStatementSearchClear, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(pnlStatementLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(scrollPanelTransactionTable, javax.swing.GroupLayout.PREFERRED_SIZE, 1215, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(pnlConfirmStatementDetail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlStatementLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(scPnlTransaction, javax.swing.GroupLayout.PREFERRED_SIZE, 1118, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
         pnlStatementLayout.setVerticalGroup(
             pnlStatementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3798,12 +3855,14 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jLabel47)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlStatementLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtDepositeAccountNumber1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDepositeAccountNo1)
-                    .addComponent(btnDepositeSearchClear1))
-                .addGap(50, 50, 50)
-                .addComponent(scrollPanelTransactionTable, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 622, Short.MAX_VALUE))
+                    .addComponent(txtStatementAccountNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnStatementAccountNo)
+                    .addComponent(btnStatementSearchClear))
+                .addGap(37, 37, 37)
+                .addComponent(pnlConfirmStatementDetail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(scPnlTransaction, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         tabTransactionPanel.addTab("tab4", pnlStatement);
@@ -4078,7 +4137,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         boolean balanceValidation = openAccountModel.setBalance(balance, txtBalance);
         
-        if(Integer.parseInt(balance) >= 1000){
+        if(balanceValidation ){
             
                     //Openning date of Account convert in string format
                     Date date = new Date();
@@ -4087,7 +4146,7 @@ public class Dashboard extends javax.swing.JFrame {
 
                     GlobalDatabase.createConnection();
 
-                    if(balanceValidation)
+                    if(Integer.parseInt(balance) >= 1000)
                     {
                         GlobalDatabase.nonSelectQuery(openAccountModel.getFirstName(),
                             openAccountModel.getMiddleName(),
@@ -4124,18 +4183,18 @@ public class Dashboard extends javax.swing.JFrame {
 
                     }
                     else{
-                        JOptionPane.showMessageDialog(null, "Please enter all requird fields .... !!!");
+                        //JOptionPane.showMessageDialog(null, "Please enter all requird fields .... !!!");
+                        JOptionPane.showMessageDialog(null, "Enter MINIMUM 1000Rs. To Open Account \n \t\t\t OR \n Enter Valid Amount ... !!!");
                     }
                    // openAccountModel = null ;
                     
                     GlobalDatabase.closeConnection();
             
         
-        }
-        if(!balanceValidation)
-        {      
-            JOptionPane.showMessageDialog(null, "Enter MINIMUM 1000Rs. To Open Account \n \t\t\t OR \n Enter Valid Amount ... !!!");
-        }
+       }
+        //else{      
+//            JOptionPane.showMessageDialog(null, "Enter MINIMUM 1000Rs. To Open Account \n \t\t\t OR \n Enter Valid Amount ... !!!");
+//        }
             
         
         
@@ -4143,7 +4202,7 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void btnNextForIntialBalanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextForIntialBalanceActionPerformed
                 
-        String aadhar = txtAadhar.getText();
+        String aadhar = txtAadhar.getText().trim();
 
         boolean aadharVerification = new OpenAccount().aadharCheckAlreadyAvailable(openAccountModel, aadhar, txtAadhar, txtAccountNo);
 
@@ -4388,24 +4447,101 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void btnTransferAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTransferAmountActionPerformed
         // TODO add your handling code here:
-        String accountNo[] = {txtSenderAccountNumber.getText(), txtReceiverAccountNumber.getText()};
+        String accountNo[] = {txtSenderAccountNumber.getText().trim(), txtReceiverAccountNumber.getText().trim()};
         String balance[] = {lblSenderSetBalance.getText(), lblReceiverSetBalance.getText()};
+        
+//        System.out.println(txtSenderAccountNumber.getText());
+//        System.out.println(txtReceiverAccountNumber.getText());
+        
         String transferMoney = txtTransferAmount.getText();
         
-        new TransferMoney(accountNo, balance, transferMoney );
+        boolean balanceValidation = openAccountModel.setBalance(transferMoney, txtTransferAmount);
         
-        pnlConfirmSenderDetail.setVisible(false);
-        txtSenderAccountNumber.setText("");
-        txtSenderAccountNumber.requestFocus();
-        
-        pnlConfirmReceiverDetail.setVisible(false);
-        txtReceiverAccountNumber.setText("");
-        pnlTransferAmount.setVisible(false);
-        
-        GlobalDatabase.closeConnection();
+        if("".equals(accountNo[0]) || "".equals(accountNo[1])){
+                JOptionPane.showMessageDialog(null, "Please enter both Sender and Receiver Account Number");
+        }else{
+            
+            if(balanceValidation){
+                
+                new TransferMoney(accountNo, balance, transferMoney );
+
+                pnlConfirmSenderDetail.setVisible(false);
+                txtSenderAccountNumber.setText("");
+                txtSenderAccountNumber.requestFocus();
+
+                pnlConfirmReceiverDetail.setVisible(false);
+                txtReceiverAccountNumber.setText("");
+                pnlTransferAmount.setVisible(false);
+
+                GlobalDatabase.closeConnection();                    
+            }       
+        }
+       
         
     }//GEN-LAST:event_btnTransferAmountActionPerformed
 
+    private void btnSenderSearchClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSenderSearchClearActionPerformed
+        // TODO add your handling code here:
+         clearTransferDetail(pnlConfirmSenderDetail, txtSenderAccountNumber);     
+    }//GEN-LAST:event_btnSenderSearchClearActionPerformed
+
+    private void btnReceiverSearchClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReceiverSearchClearActionPerformed
+        // TODO add your handling code here:
+         clearTransferDetail(pnlConfirmReceiverDetail, txtReceiverAccountNumber);
+    }//GEN-LAST:event_btnReceiverSearchClearActionPerformed
+
+    private void btnTransferAmountCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTransferAmountCancelActionPerformed
+        // TODO add your handling code here:
+        pnlTransferAmount.setVisible(false);
+        txtTransferAmount.setText("");
+        clearTransferDetail(pnlConfirmReceiverDetail, txtReceiverAccountNumber);
+        clearTransferDetail(pnlConfirmSenderDetail, txtSenderAccountNumber);
+    }//GEN-LAST:event_btnTransferAmountCancelActionPerformed
+
+    private void btnStatementAccountNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStatementAccountNoActionPerformed
+        // TODO add your handling code here:
+        
+        String accountNo = txtStatementAccountNumber.getText().trim();
+        
+        JLabel lblSetInfo[] = {lblStatementSetAccountHolderName, lblStatementSetAadharNo, lblStatementSetMobileNo, lblStatementSetBalance };  
+        
+        cashOperationAccountFindOptiCode(accountNo, pnlConfirmStatementDetail , lblSetInfo );
+        
+    }//GEN-LAST:event_btnStatementAccountNoActionPerformed
+
+    private void btnStatementConfirmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStatementConfirmActionPerformed
+        // TODO add your handling code here:
+        scPnlTransaction.setVisible(true);
+        String accountNo = txtStatementAccountNumber.getText().trim();
+        
+        
+        ResultSet resultSet = GlobalDatabase.selectQuery("SELECT * FROM transaction WHERE accountno='"+ accountNo +"'");
+        
+        if(resultSet != null){
+            System.out.println("Transaction find ... !!! ");
+        
+            DefaultTableModel tm = (DefaultTableModel) tblTransaction.getModel();
+            tm.setRowCount(0);
+            
+            try {
+                    while(resultSet.next()){
+                            Object o[] = {resultSet.getString(1), resultSet.getString(2),resultSet.getString(3),resultSet.getString(4),
+                                          resultSet.getString(5), resultSet.getString(6),resultSet.getString(7),resultSet.getString(8)};
+                        tm.addRow(o);
+                    }
+            } catch (SQLException ex) {
+                Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }else{
+                System.out.println("Transaction not found ... !!!");
+        }
+        
+    }//GEN-LAST:event_btnStatementConfirmActionPerformed
+
+    public void clearTransferDetail(JPanel jpanel, JTextField txtfield){
+            jpanel.setVisible(false);
+            txtfield.setText("");
+    }
     public void cancelCashOperationOptimizeCode(JTextField txtAccountNumber, JTextField txtAmount, JPanel pnlConfirmDetail, JPanel pnlAmount ){
         txtAccountNumber.setText("");
         txtAccountNumber.requestFocus();
@@ -4526,13 +4662,11 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton btnCloseAccountSearch;
     private javax.swing.JButton btnCreateAccount;
     private javax.swing.JButton btnDepositeAccountNo;
-    private javax.swing.JButton btnDepositeAccountNo1;
     private javax.swing.JButton btnDepositeAmount;
     private javax.swing.JButton btnDepositeAmountCancel;
     private javax.swing.JButton btnDepositeConfirmAccount;
     private javax.swing.JButton btnDepositeConfirmCancel;
     private javax.swing.JButton btnDepositeSearchClear;
-    private javax.swing.JButton btnDepositeSearchClear1;
     private javax.swing.JButton btnNextForAccountDetails;
     private javax.swing.JButton btnNextForIntialBalance;
     private javax.swing.JButton btnOKaccountDETAIL;
@@ -4544,6 +4678,10 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton btnSearchINFORMATIONreset;
     private javax.swing.JButton btnSenderAccountNo;
     private javax.swing.JButton btnSenderSearchClear;
+    private javax.swing.JButton btnStatementAccountNo;
+    private javax.swing.JButton btnStatementConfirm;
+    private javax.swing.JButton btnStatementConfirmCancel;
+    private javax.swing.JButton btnStatementSearchClear;
     private javax.swing.JButton btnTransferAmount;
     private javax.swing.JButton btnTransferAmountCancel;
     private javax.swing.JButton btnUpdateCancel;
@@ -4656,8 +4794,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JPanel jpAdvertiseManage;
     private javax.swing.JPanel jplMarqueeWelcome;
     private javax.swing.JPanel jpnAttention;
@@ -4750,6 +4886,10 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel lblSenderSetMobileNo;
     private javax.swing.JLabel lblStateReq;
     private javax.swing.JLabel lblStatementMouseClick;
+    private javax.swing.JLabel lblStatementSetAadharNo;
+    private javax.swing.JLabel lblStatementSetAccountHolderName;
+    private javax.swing.JLabel lblStatementSetBalance;
+    private javax.swing.JLabel lblStatementSetMobileNo;
     private javax.swing.JLabel lblTransactionHeading;
     private javax.swing.JLabel lblTransferMoneyMouseClick;
     private javax.swing.JLabel lblUpdateADDRESS;
@@ -4782,13 +4922,9 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel lblWelcome;
     private javax.swing.JLabel lblWithdrawMouseClick;
     private javax.swing.JLabel lblWithdrawSetAadharNo;
-    private javax.swing.JLabel lblWithdrawSetAadharNo3;
     private javax.swing.JLabel lblWithdrawSetAccountHolderName;
-    private javax.swing.JLabel lblWithdrawSetAccountHolderName3;
     private javax.swing.JLabel lblWithdrawSetBalance;
-    private javax.swing.JLabel lblWithdrawSetBalance3;
     private javax.swing.JLabel lblWithdrawSetMobileNo;
-    private javax.swing.JLabel lblWithdrawSetMobileNo3;
     private javax.swing.JPanel pnBankName;
     private javax.swing.JPanel pnCarLoan;
     private javax.swing.JPanel pnMainPanelDashboard;
@@ -4803,6 +4939,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel pnlConfirmDepositeDetail;
     private javax.swing.JPanel pnlConfirmReceiverDetail;
     private javax.swing.JPanel pnlConfirmSenderDetail;
+    private javax.swing.JPanel pnlConfirmStatementDetail;
     private javax.swing.JPanel pnlConfirmWithdrawDetail;
     private javax.swing.JPanel pnlDeposite;
     private javax.swing.JPanel pnlDepositeAmount;
@@ -4817,7 +4954,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel pnlSearchAccountInformation;
     private javax.swing.JPanel pnlStatement;
     private javax.swing.JPanel pnlTranferMoney;
-    private javax.swing.JPanel pnlTransactionHistory;
     private javax.swing.JPanel pnlTransactionMenu;
     private javax.swing.JPanel pnlTranscation;
     private javax.swing.JPanel pnlTransferAmount;
@@ -4829,13 +4965,14 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JRadioButton radioBtnMale;
     private javax.swing.JRadioButton radioBtnOther;
     private javax.swing.ButtonGroup radioGroupGender;
+    private javax.swing.JScrollPane scPnlTransaction;
     private javax.swing.JScrollPane scrollPanelTransaction;
-    private javax.swing.JScrollPane scrollPanelTransactionTable;
     private javax.swing.JScrollPane scrollpaneAccountMain;
     private javax.swing.JScrollPane spHomePage;
     private com.yogesh.tabpanel.TabbedPaneCustom tabCustomAccountManage;
     private com.yogesh.tabpanel.TabbedPaneCustom tabCustomMenu;
     private javax.swing.JTabbedPane tabTransactionPanel;
+    private javax.swing.JTable tblTransaction;
     private javax.swing.JTextField txtAadhar;
     private javax.swing.JTextField txtAccountNo;
     private javax.swing.JTextField txtAccountNoClose;
@@ -4862,7 +4999,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField txtClosePin;
     private javax.swing.JTextField txtCloseState;
     private javax.swing.JTextField txtDepositeAccountNumber;
-    private javax.swing.JTextField txtDepositeAccountNumber1;
     private javax.swing.JTextField txtDepositeAmount;
     private javax.swing.JTextField txtDistrict;
     private javax.swing.JTextField txtDivision;
@@ -4894,6 +5030,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField txtSearchAccountNo;
     private javax.swing.JTextField txtSenderAccountNumber;
     private javax.swing.JTextField txtState;
+    private javax.swing.JTextField txtStatementAccountNumber;
     private javax.swing.JTextField txtTransferAmount;
     private javax.swing.JTextField txtUpdateAccountNo;
     private javax.swing.JTextField txtUpdateAddress;

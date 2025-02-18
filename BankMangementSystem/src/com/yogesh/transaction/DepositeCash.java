@@ -12,7 +12,7 @@ public class DepositeCash {
                 
                 //Value will change in Account Table
                 GlobalDatabase.nonSelectQuery("UPDATE account SET balance='"+ balance +"' Where accountno = '"+ accountNo +"'");
-                String particulars = "DEPOSITE - TO CASH";
+                String particulars = "CASH DEPOSITE";
                 String withdrawAmount = " ";
                 
                 new TransactionTracking(accountNo,particulars, withdrawAmount ,String.valueOf(depositeAmount),String.valueOf(balance));
