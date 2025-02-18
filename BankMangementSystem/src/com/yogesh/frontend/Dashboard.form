@@ -5778,6 +5778,9 @@
                                 </Property>
                                 <Property name="text" type="java.lang.String" value="CLEAR"/>
                               </Properties>
+                              <Events>
+                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnStatementSearchClearActionPerformed"/>
+                              </Events>
                             </Component>
                             <Container class="javax.swing.JScrollPane" name="scPnlTransaction">
                               <AuxValues>
@@ -6045,6 +6048,9 @@
                                     </Property>
                                     <Property name="text" type="java.lang.String" value="CANCEL"/>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnStatementConfirmCancelActionPerformed"/>
+                                  </Events>
                                 </Component>
                               </SubComponents>
                             </Container>

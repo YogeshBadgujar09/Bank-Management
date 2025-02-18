@@ -3673,6 +3673,11 @@ public class Dashboard extends javax.swing.JFrame {
         btnStatementSearchClear.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnStatementSearchClear.setForeground(new java.awt.Color(255, 255, 255));
         btnStatementSearchClear.setText("CLEAR");
+        btnStatementSearchClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStatementSearchClearActionPerformed(evt);
+            }
+        });
 
         scPnlTransaction.setVisible(false);
 
@@ -3764,6 +3769,11 @@ public class Dashboard extends javax.swing.JFrame {
         btnStatementConfirmCancel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnStatementConfirmCancel.setForeground(new java.awt.Color(255, 255, 255));
         btnStatementConfirmCancel.setText("CANCEL");
+        btnStatementConfirmCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStatementConfirmCancelActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlConfirmStatementDetailLayout = new javax.swing.GroupLayout(pnlConfirmStatementDetail);
         pnlConfirmStatementDetail.setLayout(pnlConfirmStatementDetailLayout);
@@ -4538,6 +4548,21 @@ public class Dashboard extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnStatementConfirmActionPerformed
 
+    private void btnStatementSearchClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStatementSearchClearActionPerformed
+        // TODO add your handling code here:
+       clearStatementOptimizeCode();
+    }//GEN-LAST:event_btnStatementSearchClearActionPerformed
+
+    private void btnStatementConfirmCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStatementConfirmCancelActionPerformed
+        // TODO add your handling code here:
+       clearStatementOptimizeCode();
+    }//GEN-LAST:event_btnStatementConfirmCancelActionPerformed
+    
+    public void clearStatementOptimizeCode(){
+        pnlConfirmStatementDetail.setVisible(false);
+        scPnlTransaction.setVisible(false);
+    }
+    
     public void clearTransferDetail(JPanel jpanel, JTextField txtfield){
             jpanel.setVisible(false);
             txtfield.setText("");
