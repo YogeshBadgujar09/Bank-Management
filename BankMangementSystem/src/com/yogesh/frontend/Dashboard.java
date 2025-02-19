@@ -36,6 +36,7 @@ public class Dashboard extends javax.swing.JFrame {
     public Dashboard() {
         initComponents();   
         setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
+        
     }  
     
     /**
@@ -4007,7 +4008,7 @@ public class Dashboard extends javax.swing.JFrame {
         String dateofbirth = null;
         Date dateCheckSelect = txtUpdateDOB.getDate();
 
-        if(dateCheckSelect != null){
+//        if(dateCheckSelect != null){
 
             SimpleDateFormat simpleDOB = new SimpleDateFormat("dd-MMM-yyyy");
 
@@ -4016,12 +4017,12 @@ public class Dashboard extends javax.swing.JFrame {
             String email = txtUpdateEmail.getText().trim();
 
             String address = txtUpdateAddress.getText();
-            String city = txtUpdateCity.getText();
-            String division = txtUpdateDivision.getText();
-            String district = txtUpdateDistrict.getText();
+            String city = txtUpdateCity.getText().trim();
+            String division = txtUpdateDivision.getText().trim();
+            String district = txtUpdateDistrict.getText().trim();
             String pinCode = txtUpdatePincode.getText().trim();
             // System.out.println("PIN CODE :" + pinCode + "/" );
-            String state = txtUpdateState.getText();
+            String state = txtUpdateState.getText().trim();
 
             boolean validationConfirm ;
 
@@ -4053,10 +4054,10 @@ public class Dashboard extends javax.swing.JFrame {
                     // System.out.print(" Not Update Account");
                     pnlUpdateKYCdataENTER.setVisible(false);
                 }
-            }
-            else{
-                JOptionPane.showMessageDialog(null, "Fill all the Required Field");
-            }
+//            }
+//            else{
+//                JOptionPane.showMessageDialog(null, "Fill all the Required Field");
+//            }
         }
     }//GEN-LAST:event_btnUpdateKYCActionPerformed
 
@@ -4328,16 +4329,18 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         
      String amount = txtDepositeAmount.getText();
+     
      boolean flag = new OpenAccountModel().setBalance(amount, txtDepositeAmount);
      
-     if(Integer.parseInt(amount) >= 1000){
+     if(flag){
         
-        if(flag){
+        if(Integer.parseInt(amount) >= 1000){
             new DepositeCash(lblDepositeSetBalance.getText(), txtDepositeAmount.getText(), txtDepositeAccountNumber.getText());
             JOptionPane.showMessageDialog(null, "Deposite Cash To Your Account Successfully ... !!!");
         }
-     }else{
-         JOptionPane.showMessageDialog(null, "Deposite MINIMUM 1000 Rs \n \t\t OR \nEnter Valid number");
+        else{
+         JOptionPane.showMessageDialog(null, "Deposite MINIMUM 1000 Rs ... !!!!");
+        }
      }
       
      
