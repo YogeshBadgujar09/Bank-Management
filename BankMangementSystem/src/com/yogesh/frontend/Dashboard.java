@@ -4004,14 +4004,24 @@ public class Dashboard extends javax.swing.JFrame {
         String fname = txtUpdateFirstName.getText();
         String mname = txtUpdateMiddleName.getText();
         String lname = txtUpdateLastName.getText();
-
+        
+        
+//        String dateofbirth = null;
+//        Date dateCheckSelect = dateDOB.getDate();
+//
+//        if(dateCheckSelect != null){
+//            SimpleDateFormat simpleDOB = new SimpleDateFormat("dd-MMM-yyyy");
+//            dateofbirth = simpleDOB.format(dateDOB.getDate());
+//        }
+        
         String dateofbirth = null;
         Date dateCheckSelect = txtUpdateDOB.getDate();
-
-//        if(dateCheckSelect != null){
+        System.out.println("Date Check :" + dateCheckSelect);
+        if(dateCheckSelect != null){
 
             SimpleDateFormat simpleDOB = new SimpleDateFormat("dd-MMM-yyyy");
-
+            dateofbirth = simpleDOB.format(txtUpdateDOB.getDate());
+                    
             String gender = txtUpdateGender.getText();
             String mobileno = txtUpdateMobileNo.getText().trim();
             String email = txtUpdateEmail.getText().trim();
@@ -4054,10 +4064,10 @@ public class Dashboard extends javax.swing.JFrame {
                     // System.out.print(" Not Update Account");
                     pnlUpdateKYCdataENTER.setVisible(false);
                 }
-//            }
-//            else{
-//                JOptionPane.showMessageDialog(null, "Fill all the Required Field");
-//            }
+            }
+            else{
+                JOptionPane.showMessageDialog(null, "Fill all the Required Field");
+            }
         }
     }//GEN-LAST:event_btnUpdateKYCActionPerformed
 
@@ -4084,7 +4094,7 @@ public class Dashboard extends javax.swing.JFrame {
                     txtUpdateMiddleName.setText(resultSet.getString(2));
                     txtUpdateLastName.setText(resultSet.getString(3));
                     txtUpdateDOB.setDate(resultSet.getDate(4));
-
+                    System.out.println(resultSet.getDate(4));
                     txtUpdateGender.setText(resultSet.getString(5));
                     txtUpdateMobileNo.setText(resultSet.getString(6));
                     txtUpdateEmail.setText(resultSet.getString(7));
