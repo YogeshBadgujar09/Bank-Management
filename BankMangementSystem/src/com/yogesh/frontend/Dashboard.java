@@ -313,13 +313,13 @@ public class Dashboard extends javax.swing.JFrame {
         pnlHeadingTransaction = new javax.swing.JPanel();
         lblTransactionHeading = new javax.swing.JLabel();
         pnlTransactionMenu = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
+        pnlDepositeClick = new javax.swing.JPanel();
         lblDepositeMouseClick = new javax.swing.JLabel();
-        jPanel13 = new javax.swing.JPanel();
+        pnlWithdrawClick = new javax.swing.JPanel();
         lblWithdrawMouseClick = new javax.swing.JLabel();
-        jPanel14 = new javax.swing.JPanel();
+        pnlTransferClick = new javax.swing.JPanel();
         lblTransferMoneyMouseClick = new javax.swing.JLabel();
-        jPanel15 = new javax.swing.JPanel();
+        pnlStatementClick = new javax.swing.JPanel();
         lblStatementMouseClick = new javax.swing.JLabel();
         tabTransactionPanel = new javax.swing.JTabbedPane();
         pnlDeposite = new javax.swing.JPanel();
@@ -2522,7 +2522,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         pnlTransactionMenu.setBackground(new java.awt.Color(0, 153, 153));
 
-        jPanel10.setBackground(new java.awt.Color(0, 102, 102));
+        pnlDepositeClick.setBackground(new java.awt.Color(0, 102, 102));
 
         lblDepositeMouseClick.setBackground(new java.awt.Color(255, 255, 255));
         lblDepositeMouseClick.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -2535,24 +2535,24 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlDepositeClickLayout = new javax.swing.GroupLayout(pnlDepositeClick);
+        pnlDepositeClick.setLayout(pnlDepositeClickLayout);
+        pnlDepositeClickLayout.setHorizontalGroup(
+            pnlDepositeClickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDepositeClickLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblDepositeMouseClick, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
+        pnlDepositeClickLayout.setVerticalGroup(
+            pnlDepositeClickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDepositeClickLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblDepositeMouseClick, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jPanel13.setBackground(new java.awt.Color(0, 102, 102));
+        pnlWithdrawClick.setBackground(new java.awt.Color(0, 102, 102));
 
         lblWithdrawMouseClick.setBackground(new java.awt.Color(255, 255, 255));
         lblWithdrawMouseClick.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -2565,24 +2565,24 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
-        jPanel13.setLayout(jPanel13Layout);
-        jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel13Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlWithdrawClickLayout = new javax.swing.GroupLayout(pnlWithdrawClick);
+        pnlWithdrawClick.setLayout(pnlWithdrawClickLayout);
+        pnlWithdrawClickLayout.setHorizontalGroup(
+            pnlWithdrawClickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlWithdrawClickLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblWithdrawMouseClick, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel13Layout.createSequentialGroup()
+        pnlWithdrawClickLayout.setVerticalGroup(
+            pnlWithdrawClickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlWithdrawClickLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblWithdrawMouseClick, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jPanel14.setBackground(new java.awt.Color(0, 102, 102));
+        pnlTransferClick.setBackground(new java.awt.Color(0, 102, 102));
 
         lblTransferMoneyMouseClick.setBackground(new java.awt.Color(255, 255, 255));
         lblTransferMoneyMouseClick.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -2595,24 +2595,24 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
-        jPanel14.setLayout(jPanel14Layout);
-        jPanel14Layout.setHorizontalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlTransferClickLayout = new javax.swing.GroupLayout(pnlTransferClick);
+        pnlTransferClick.setLayout(pnlTransferClickLayout);
+        pnlTransferClickLayout.setHorizontalGroup(
+            pnlTransferClickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTransferClickLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblTransferMoneyMouseClick, javax.swing.GroupLayout.DEFAULT_SIZE, 163, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel14Layout.setVerticalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
+        pnlTransferClickLayout.setVerticalGroup(
+            pnlTransferClickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlTransferClickLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblTransferMoneyMouseClick, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jPanel15.setBackground(new java.awt.Color(0, 102, 102));
+        pnlStatementClick.setBackground(new java.awt.Color(0, 102, 102));
 
         lblStatementMouseClick.setBackground(new java.awt.Color(255, 255, 255));
         lblStatementMouseClick.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -2625,18 +2625,18 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
-        jPanel15.setLayout(jPanel15Layout);
-        jPanel15Layout.setHorizontalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel15Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlStatementClickLayout = new javax.swing.GroupLayout(pnlStatementClick);
+        pnlStatementClick.setLayout(pnlStatementClickLayout);
+        pnlStatementClickLayout.setHorizontalGroup(
+            pnlStatementClickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlStatementClickLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblStatementMouseClick, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel15Layout.setVerticalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel15Layout.createSequentialGroup()
+        pnlStatementClickLayout.setVerticalGroup(
+            pnlStatementClickLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlStatementClickLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblStatementMouseClick, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                 .addContainerGap())
@@ -2646,22 +2646,22 @@ public class Dashboard extends javax.swing.JFrame {
         pnlTransactionMenu.setLayout(pnlTransactionMenuLayout);
         pnlTransactionMenuLayout.setHorizontalGroup(
             pnlTransactionMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlDepositeClick, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlWithdrawClick, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlTransferClick, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlStatementClick, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnlTransactionMenuLayout.setVerticalGroup(
             pnlTransactionMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlTransactionMenuLayout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlDepositeClick, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlWithdrawClick, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
-                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlTransferClick, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
-                .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlStatementClick, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -4301,24 +4301,44 @@ public class Dashboard extends javax.swing.JFrame {
         txtAadhar.setText(" ");
     }//GEN-LAST:event_btnNextForAccountDetailsActionPerformed
 
+    public void operationPanelChangeColor(int index, JPanel[] panel){
+        
+        panel[index].setBackground(new java.awt.Color(255,102,0));
+        for(int i=0; i<panel.length; i++)
+        {
+            if(index != i)
+            {
+                panel[i].setBackground(new java.awt.Color(0,102,102));
+            }
+        }
+    }
+    
     private void lblDepositeMouseClickMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblDepositeMouseClickMouseClicked
         // TODO add your handling code here:
        tabTransactionPanel.setSelectedIndex(0);
+       JPanel[] panel = {pnlDepositeClick, pnlWithdrawClick, pnlTransferClick, pnlStatementClick };
+       operationPanelChangeColor(0, panel);
     }//GEN-LAST:event_lblDepositeMouseClickMouseClicked
 
     private void lblWithdrawMouseClickMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblWithdrawMouseClickMouseClicked
         // TODO add your handling code here:
         tabTransactionPanel.setSelectedIndex(1);
+        JPanel[] panel = {pnlDepositeClick, pnlWithdrawClick, pnlTransferClick, pnlStatementClick };
+       operationPanelChangeColor(1, panel);
     }//GEN-LAST:event_lblWithdrawMouseClickMouseClicked
 
     private void lblTransferMoneyMouseClickMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblTransferMoneyMouseClickMouseClicked
         // TODO add your handling code here:
         tabTransactionPanel.setSelectedIndex(2);
+        JPanel[] panel = {pnlDepositeClick, pnlWithdrawClick, pnlTransferClick, pnlStatementClick };
+        operationPanelChangeColor(2, panel);
     }//GEN-LAST:event_lblTransferMoneyMouseClickMouseClicked
 
     private void lblStatementMouseClickMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblStatementMouseClickMouseClicked
         // TODO add your handling code here:
         tabTransactionPanel.setSelectedIndex(3);
+        JPanel[] panel = {pnlDepositeClick, pnlWithdrawClick, pnlTransferClick, pnlStatementClick };
+        operationPanelChangeColor(3, panel);
     }//GEN-LAST:event_lblStatementMouseClickMouseClicked
 
     private void btnDepositeAccountNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDepositeAccountNoActionPerformed
@@ -4806,12 +4826,8 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
@@ -4981,6 +4997,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel pnlConfirmWithdrawDetail;
     private javax.swing.JPanel pnlDeposite;
     private javax.swing.JPanel pnlDepositeAmount;
+    private javax.swing.JPanel pnlDepositeClick;
     private javax.swing.JPanel pnlDepositeLable;
     private javax.swing.JPanel pnlFORAccountDetails;
     private javax.swing.JPanel pnlHeadingTransaction;
@@ -4991,14 +5008,17 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel pnlSearchAccount;
     private javax.swing.JPanel pnlSearchAccountInformation;
     private javax.swing.JPanel pnlStatement;
+    private javax.swing.JPanel pnlStatementClick;
     private javax.swing.JPanel pnlTranferMoney;
     private javax.swing.JPanel pnlTransactionMenu;
     private javax.swing.JPanel pnlTranscation;
     private javax.swing.JPanel pnlTransferAmount;
+    private javax.swing.JPanel pnlTransferClick;
     private javax.swing.JPanel pnlUpdateKYC;
     private javax.swing.JPanel pnlUpdateKYCdataENTER;
     private javax.swing.JPanel pnlWithdraw;
     private javax.swing.JPanel pnlWithdrawAmount;
+    private javax.swing.JPanel pnlWithdrawClick;
     private javax.swing.JRadioButton radioBtnFemale;
     private javax.swing.JRadioButton radioBtnMale;
     private javax.swing.JRadioButton radioBtnOther;
