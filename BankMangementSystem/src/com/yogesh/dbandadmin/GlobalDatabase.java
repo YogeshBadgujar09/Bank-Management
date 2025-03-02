@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.sql.PreparedStatement;
 
 /**
  *
@@ -23,7 +24,7 @@ public class GlobalDatabase {
     static Connection connection;
     static Driver driver ;
     static Statement statement;
-    //static PreparedStatement preparedStatement;
+    static PreparedStatement preparedStatement;
     
     public static void createConnection()  {
         try {
@@ -31,7 +32,7 @@ public class GlobalDatabase {
             DriverManager.registerDriver(driver);
             connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521","system","2345");
             statement = connection.createStatement();
-            
+            preparedStatement = connection.prepareStatement("INSERT INTO accountimage VALUES(?,?,?)");
         } catch (SQLException e) {
             System.out.println("Problem to get Connection .... !!! ");
             throw new RuntimeException(e);
@@ -81,6 +82,19 @@ public class GlobalDatabase {
         try {
             statement = connection.createStatement();
             statement.executeQuery(query);
+        } catch (SQLException ex) {
+            Logger.getLogger(GlobalDatabase.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public static void nonSelectQueryForImage(String accountNo, byte[] customerImage , byte[] customerSign)
+    {
+        try {
+          preparedStatement.setString(1, accountNo);
+          preparedStatement.setBytes(2,customerImage);
+          preparedStatement.setBytes(3, customerSign);
+          
+          preparedStatement.execute();
         } catch (SQLException ex) {
             Logger.getLogger(GlobalDatabase.class.getName()).log(Level.SEVERE, null, ex);
         }
