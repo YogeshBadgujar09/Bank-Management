@@ -9,13 +9,13 @@ import java.util.logging.Logger;
 
 public class ImageSave {
     
-    ImageSave(){
+    public ImageSave(String accountNo, String customerImagePath, String customerSignPath){
             
        GlobalDatabase.createConnection();
        
-       String accountNo = "00001234567890";
-       String customerImagePath = "C:\\Users\\Yogesh\\Desktop\\depositeAndwithdraw.png";
-       String customerSignPath  = "C:\\Users\\Yogesh\\Desktop\\Screenshot 2025-02-21 214029.jpg";
+//        accountNo = "00001234567890";
+//        customerImagePath = "C:\\Users\\Yogesh\\Desktop\\depositeAndwithdraw.png";
+//        customerSignPath  = "C:\\Users\\Yogesh\\Desktop\\Screenshot 2025-02-21 214029.jpg";
        
        //            FileInputStream imageFileInputStream = new FileInputStream(customerImagePath);
 //            FileInputStream signFileInputStream = new FileInputStream(customerSignPath);
@@ -47,9 +47,9 @@ public class ImageSave {
     }
     
     
-    public static void main(String args[])
-    {
-           new ImageSave();
-    }
+//    public static void main(String args[])
+//    {
+//           new ImageSave();
+//    }
     
 }

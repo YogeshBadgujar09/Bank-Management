@@ -68,7 +68,7 @@ public class OpenAccount {
 
                  //   boolean accountNomatch ;
 
-                    System.out.println("Enter Account Number :");
+//                    System.out.println("Enter Account Number :");
                     String accountNo = generateAccountNumber() ;
 
                         ResultSet resultSetAccount = new AccountAvailableClass().accountAvailable(accountNo);

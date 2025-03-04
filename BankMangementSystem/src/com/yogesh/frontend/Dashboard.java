@@ -3,6 +3,7 @@ package com.yogesh.frontend;
 
 import com.yogesh.closeaccount.CloseAccount;
 import com.yogesh.dbandadmin.GlobalDatabase;
+import com.yogesh.imagecode.ImageSave;
 import com.yogesh.openaccount.OpenAccount;
 import com.yogesh.openaccount.OpenAccountModel;
 import com.yogesh.optimization.AccountAvailableClass;
@@ -13,12 +14,19 @@ import com.yogesh.transaction.TransactionTracking;
 import com.yogesh.transaction.TransferMoney;
 import com.yogesh.transaction.WithdrawCash;
 import com.yogesh.updateaccount.UpdateAccount;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -30,6 +38,9 @@ import javax.swing.table.DefaultTableModel;
  * @author Yogesh
  */
 public class Dashboard extends javax.swing.JFrame {
+    
+    private String uploadPhotoPath;
+    private String uploadSignPath;
     
     OpenAccountModel openAccountModel = new OpenAccountModel();
     
@@ -157,6 +168,15 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
         btnCreateAccount = new javax.swing.JButton();
+        pnlImageUpload = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel52 = new javax.swing.JLabel();
+        lblUploadPhoto = new javax.swing.JLabel();
+        btnUploadPhoto = new javax.swing.JButton();
+        lblUploadSign = new javax.swing.JLabel();
+        btnUploadSign = new javax.swing.JButton();
+        btnUploadImage = new javax.swing.JButton();
+        btnUploadImageCancel = new javax.swing.JButton();
         pnlSearchAccount = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
         pnlFORAccountDetails = new javax.swing.JPanel();
@@ -308,6 +328,7 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel12 = new javax.swing.JPanel();
         lblCloseOpeningDate = new javax.swing.JLabel();
         txtCloseOpeningDate = new javax.swing.JTextField();
+        jFileChooser1 = new javax.swing.JFileChooser();
         scrollPanelTransaction = new javax.swing.JScrollPane();
         pnlTranscation = new javax.swing.JPanel();
         pnlHeadingTransaction = new javax.swing.JPanel();
@@ -1045,7 +1066,7 @@ public class Dashboard extends javax.swing.JFrame {
                         .addComponent(txtAccountType, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(pnlAccountInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtAccountNo, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1157,6 +1178,81 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
+        pnlImageUpload.setBackground(new java.awt.Color(255, 255, 255));
+        pnlImageUpload.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel10.setBackground(new java.awt.Color(0, 102, 102));
+
+        jLabel52.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel52.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel52.setText("UPLOAD IMAGE & SIGNATURE");
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel52, javax.swing.GroupLayout.DEFAULT_SIZE, 952, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        pnlImageUpload.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 14, -1, -1));
+
+        lblUploadPhoto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblUploadPhoto.setText("SELECT IMAGE ");
+        lblUploadPhoto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 0)));
+        lblUploadPhoto.setPreferredSize(new java.awt.Dimension(145, 148));
+        pnlImageUpload.add(lblUploadPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 69, 156, 160));
+
+        btnUploadPhoto.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnUploadPhoto.setText("UPLOAD PHOTO");
+        btnUploadPhoto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUploadPhotoActionPerformed(evt);
+            }
+        });
+        pnlImageUpload.add(btnUploadPhoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(331, 138, -1, -1));
+
+        lblUploadSign.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblUploadSign.setText("SELECT SIGN");
+        lblUploadSign.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 0)));
+        lblUploadSign.setPreferredSize(new java.awt.Dimension(136, 147));
+        pnlImageUpload.add(lblUploadSign, new org.netbeans.lib.awtextra.AbsoluteConstraints(535, 69, 156, 160));
+
+        btnUploadSign.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnUploadSign.setText("UPLOAD SIGN");
+        btnUploadSign.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUploadSignActionPerformed(evt);
+            }
+        });
+        pnlImageUpload.add(btnUploadSign, new org.netbeans.lib.awtextra.AbsoluteConstraints(745, 138, -1, -1));
+
+        btnUploadImage.setBackground(new java.awt.Color(0, 102, 102));
+        btnUploadImage.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnUploadImage.setForeground(new java.awt.Color(255, 255, 255));
+        btnUploadImage.setText("UPLOAD");
+        btnUploadImage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUploadImageActionPerformed(evt);
+            }
+        });
+        pnlImageUpload.add(btnUploadImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(399, 256, -1, -1));
+
+        btnUploadImageCancel.setBackground(new java.awt.Color(0, 102, 102));
+        btnUploadImageCancel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnUploadImageCancel.setForeground(new java.awt.Color(255, 255, 255));
+        btnUploadImageCancel.setText("CANCEL");
+        pnlImageUpload.add(btnUploadImageCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(562, 256, -1, -1));
+
         javax.swing.GroupLayout pnlOpenAccountLayout = new javax.swing.GroupLayout(pnlOpenAccount);
         pnlOpenAccount.setLayout(pnlOpenAccountLayout);
         pnlOpenAccountLayout.setHorizontalGroup(
@@ -1245,11 +1341,12 @@ public class Dashboard extends javax.swing.JFrame {
                             .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(86, 86, 86))
                     .addGroup(pnlOpenAccountLayout.createSequentialGroup()
-                        .addGroup(pnlOpenAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(pnlPersonalInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(pnlAddressHeading, javax.swing.GroupLayout.DEFAULT_SIZE, 963, Short.MAX_VALUE)
-                            .addComponent(pnlAccountInformation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(pnlInitialBalance, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(pnlOpenAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(pnlImageUpload, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pnlPersonalInfo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pnlAddressHeading, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 964, Short.MAX_VALUE)
+                            .addComponent(pnlAccountInformation, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pnlInitialBalance, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap(61, Short.MAX_VALUE))))
         );
         pnlOpenAccountLayout.setVerticalGroup(
@@ -1332,8 +1429,10 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addComponent(pnlAccountInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(pnlImageUpload, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlInitialBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addGap(56, 56, 56))
         );
 
         tabCustomAccountManage.addTab("OPEN ACCOUNT", pnlOpenAccount);
@@ -1671,7 +1770,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addComponent(pnlSearchAccountInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(256, Short.MAX_VALUE))
         );
 
         tabCustomAccountManage.addTab("SEARCH ACCOUNT", pnlSearchAccount);
@@ -2033,7 +2132,7 @@ public class Dashboard extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(pnlUpdateKYCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 1032, Short.MAX_VALUE)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 1033, Short.MAX_VALUE)
                             .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(pnlUpdateKYCLayout.createSequentialGroup()
                         .addGap(158, 158, 158)
@@ -2070,7 +2169,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(pnlUpdateKYCdataENTER, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(268, Short.MAX_VALUE))
         );
 
         tabCustomAccountManage.addTab("UPDATE KYC", pnlUpdateKYC);
@@ -2393,7 +2492,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(pnlCloseAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCloseBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtCloseOpeningDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 272, Short.MAX_VALUE)
                 .addGroup(pnlCloseAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCloseAccount)
                     .addComponent(btnCloseAccountCancel))
@@ -2449,6 +2548,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         tabCustomAccountManage.addTab("CLOSE ACCOUNT", pnlCloseAccount);
+        tabCustomAccountManage.addTab("tab5", jFileChooser1);
 
         javax.swing.GroupLayout pnlAccountMainLayout = new javax.swing.GroupLayout(pnlAccountMain);
         pnlAccountMain.setLayout(pnlAccountMainLayout);
@@ -4591,6 +4691,72 @@ public class Dashboard extends javax.swing.JFrame {
        clearStatementOptimizeCode();
     }//GEN-LAST:event_btnStatementConfirmCancelActionPerformed
     
+    
+    private void btnUploadPhotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUploadPhotoActionPerformed
+        // TODO add your handling code here:
+        uploadPhotoPath = imageOptimizeCodeSetLable(lblUploadPhoto);
+        System.out.print("Path of Photo :" + uploadPhotoPath);
+    }//GEN-LAST:event_btnUploadPhotoActionPerformed
+
+    private void btnUploadSignActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUploadSignActionPerformed
+        // TODO add your handling code here:
+        uploadSignPath = imageOptimizeCodeSetLable(lblUploadSign);
+        System.out.print("Path of Sign :" + uploadSignPath);
+    }//GEN-LAST:event_btnUploadSignActionPerformed
+
+    private void btnUploadImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUploadImageActionPerformed
+        // TODO add your handling code here:
+        // ImageSave imageSave = 
+        new ImageSave("11234556600000", this.uploadPhotoPath, uploadSignPath);
+       
+    }//GEN-LAST:event_btnUploadImageActionPerformed
+    
+    
+    public String imageOptimizeCodeSetLable(JLabel lblPhoto){
+    
+        JFileChooser jFileChooser = new JFileChooser();
+       
+        int returnValue = jFileChooser.showOpenDialog(null);
+       
+        File selectedFile = jFileChooser.getSelectedFile();       
+        
+                
+                if (returnValue == JFileChooser.APPROVE_OPTION && isImageFile(selectedFile)) { 
+                        // Display the file path
+                        System.out.println("Selected file : " + selectedFile.getAbsolutePath()); 
+                        
+                        String path = selectedFile.getAbsolutePath();
+                        
+                        ImageIcon imageIcon = new ImageIcon(selectedFile.getAbsolutePath());
+                       
+                        Image image = imageIcon.getImage();
+                        Image resizeImage = image.getScaledInstance(lblPhoto.getPreferredSize().width, lblPhoto.getPreferredSize().height, Image.SCALE_SMOOTH);
+
+                        imageIcon = new ImageIcon(resizeImage);
+                        lblPhoto.setText(null);
+                        lblPhoto.setIcon(imageIcon); 
+                        
+                        return path;
+                        
+                } else{
+                    JOptionPane.showMessageDialog(null, "Please select valid file ... !!!");
+                }
+                
+          return null;
+          
+    }
+    
+    
+    public boolean isImageFile(File selectedFile) {
+        
+        try {
+            BufferedImage img = ImageIO.read(selectedFile);
+            return img != null; // If img is null, the file is not a valid image
+        } catch (IOException e) {
+            return false; // An IOException indicates the file is not a valid image
+        }
+    }
+    
     public void clearStatementOptimizeCode(){
         pnlConfirmStatementDetail.setVisible(false);
         scPnlTransaction.setVisible(false);
@@ -4745,6 +4911,10 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton btnUpdateCancel;
     private javax.swing.JButton btnUpdateINFORMATIONreset;
     private javax.swing.JButton btnUpdateKYC;
+    private javax.swing.JButton btnUploadImage;
+    private javax.swing.JButton btnUploadImageCancel;
+    private javax.swing.JButton btnUploadPhoto;
+    private javax.swing.JButton btnUploadSign;
     private javax.swing.JButton btnWithdrawAccountNo;
     private javax.swing.JButton btnWithdrawAmount;
     private javax.swing.JButton btnWithdrawAmountCancel;
@@ -4752,6 +4922,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton btnWithdrawConfirmCancel;
     private javax.swing.JButton btnWithdrawSearchClear;
     private com.toedter.calendar.JDateChooser dateDOB;
+    private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -4799,6 +4970,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
@@ -4826,6 +4998,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel16;
@@ -4973,6 +5146,8 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel lblUpdatePincodeREQ;
     private javax.swing.JLabel lblUpdateSTATE;
     private javax.swing.JLabel lblUpdateStateREQ;
+    private javax.swing.JLabel lblUploadPhoto;
+    private javax.swing.JLabel lblUploadSign;
     private javax.swing.JLabel lblWelcome;
     private javax.swing.JLabel lblWithdrawMouseClick;
     private javax.swing.JLabel lblWithdrawSetAadharNo;
@@ -5002,6 +5177,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel pnlFORAccountDetails;
     private javax.swing.JPanel pnlHeadingTransaction;
     private javax.swing.JPanel pnlHome;
+    private javax.swing.JPanel pnlImageUpload;
     private javax.swing.JPanel pnlInitialBalance;
     private javax.swing.JPanel pnlOpenAccount;
     private javax.swing.JPanel pnlPersonalInfo;
@@ -5107,4 +5283,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField txtWithdrawAccountNumber;
     private javax.swing.JTextField txtWithdrawAmount;
     // End of variables declaration//GEN-END:variables
+
+    
+
 }
