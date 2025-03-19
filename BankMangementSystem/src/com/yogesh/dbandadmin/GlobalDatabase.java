@@ -38,6 +38,20 @@ public class GlobalDatabase {
             throw new RuntimeException(e);
         }
     }
+    
+     public static ResultSet selectQueryForImage(String accountNo)
+    {
+        try {
+            String sql = "SELECT * FROM ACCOUNTIMAGE WHERE ACCOUNTNO = ? ";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1,accountNo);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            return resultSet;
+            
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public static ResultSet selectQuery(String query)
     {

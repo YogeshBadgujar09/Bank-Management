@@ -8,6 +8,7 @@ import com.yogesh.openaccount.OpenAccount;
 import com.yogesh.openaccount.OpenAccountModel;
 import com.yogesh.optimization.AccountAvailableClass;
 import com.yogesh.optimization.PersonalInformationClass;
+import com.yogesh.otp.SendOTP;
 import com.yogesh.searchaccount.SearchAccount;
 import com.yogesh.transaction.DepositeCash;
 import com.yogesh.transaction.TransactionTracking;
@@ -16,8 +17,10 @@ import com.yogesh.transaction.WithdrawCash;
 import com.yogesh.updateaccount.UpdateAccount;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
+import java.sql.Blob;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -25,6 +28,7 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
@@ -32,6 +36,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
+import oracle.sql.BLOB;
 
 /**
  *
@@ -176,7 +181,6 @@ public class Dashboard extends javax.swing.JFrame {
         lblUploadSign = new javax.swing.JLabel();
         btnUploadSign = new javax.swing.JButton();
         btnUploadImage = new javax.swing.JButton();
-        btnUploadImageCancel = new javax.swing.JButton();
         pnlSearchAccount = new javax.swing.JPanel();
         jLabel30 = new javax.swing.JLabel();
         pnlFORAccountDetails = new javax.swing.JPanel();
@@ -225,6 +229,8 @@ public class Dashboard extends javax.swing.JFrame {
         txtSRCHBalance = new javax.swing.JTextField();
         txtSRCHopeningDate = new javax.swing.JTextField();
         btnOKaccountDETAIL = new javax.swing.JButton();
+        lblSRCHphoto = new javax.swing.JLabel();
+        lblSRCHSign = new javax.swing.JLabel();
         pnlUpdateKYC = new javax.swing.JPanel();
         jLabel35 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
@@ -328,7 +334,6 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel12 = new javax.swing.JPanel();
         lblCloseOpeningDate = new javax.swing.JLabel();
         txtCloseOpeningDate = new javax.swing.JTextField();
-        jFileChooser1 = new javax.swing.JFileChooser();
         scrollPanelTransaction = new javax.swing.JScrollPane();
         pnlTranscation = new javax.swing.JPanel();
         pnlHeadingTransaction = new javax.swing.JPanel();
@@ -751,7 +756,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(pnCarLoan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jpnAttention, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 485, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 524, Short.MAX_VALUE)
                 .addComponent(jpnFooter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -790,7 +795,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1180, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         pnlAccountManage.setBackground(new java.awt.Color(0, 102, 102));
@@ -1178,6 +1183,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
+        pnlImageUpload.setVisible(false);
         pnlImageUpload.setBackground(new java.awt.Color(255, 255, 255));
         pnlImageUpload.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1245,13 +1251,7 @@ public class Dashboard extends javax.swing.JFrame {
                 btnUploadImageActionPerformed(evt);
             }
         });
-        pnlImageUpload.add(btnUploadImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(399, 256, -1, -1));
-
-        btnUploadImageCancel.setBackground(new java.awt.Color(0, 102, 102));
-        btnUploadImageCancel.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnUploadImageCancel.setForeground(new java.awt.Color(255, 255, 255));
-        btnUploadImageCancel.setText("CANCEL");
-        pnlImageUpload.add(btnUploadImageCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(562, 256, -1, -1));
+        pnlImageUpload.add(btnUploadImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 250, -1, -1));
 
         javax.swing.GroupLayout pnlOpenAccountLayout = new javax.swing.GroupLayout(pnlOpenAccount);
         pnlOpenAccount.setLayout(pnlOpenAccountLayout);
@@ -1429,10 +1429,10 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addComponent(pnlAccountInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(pnlImageUpload, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnlImageUpload, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(pnlInitialBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tabCustomAccountManage.addTab("OPEN ACCOUNT", pnlOpenAccount);
@@ -1589,6 +1589,14 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
+        lblSRCHphoto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSRCHphoto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 0)));
+        lblSRCHphoto.setPreferredSize(new java.awt.Dimension(145, 148));
+
+        lblSRCHSign.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSRCHSign.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 0)));
+        lblSRCHSign.setPreferredSize(new java.awt.Dimension(136, 147));
+
         javax.swing.GroupLayout pnlSearchAccountInformationLayout = new javax.swing.GroupLayout(pnlSearchAccountInformation);
         pnlSearchAccountInformation.setLayout(pnlSearchAccountInformationLayout);
         pnlSearchAccountInformationLayout.setHorizontalGroup(
@@ -1600,56 +1608,64 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(pnlSearchAccountInformationLayout.createSequentialGroup()
                 .addGap(62, 62, 62)
                 .addGroup(pnlSearchAccountInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlSearchAccountInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtSRCHBalance, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                        .addComponent(txtSRCHaadhar)
-                        .addComponent(txtSRCHdistrict)
-                        .addComponent(txtSRCHemail)
-                        .addComponent(lblSearchEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtSRCHdob)
-                        .addComponent(txtSRCHfname)
-                        .addComponent(txtSRCHaddress)
-                        .addComponent(lblSearchAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblSearchDistrict, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblSearchBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(lblSearchFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblSearchDOB, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblSearchAadhar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(pnlSearchAccountInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlSearchAccountInformationLayout.createSequentialGroup()
-                        .addGroup(pnlSearchAccountInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlSearchAccountInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtSRCHopeningDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                                .addComponent(txtSRCHmname, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblSearchGender, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtSRCHgender, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtSRCHcity, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(lblSearchCity, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lblSearchPinCode, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtSRCHpincode, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtSRCHaccountType, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(lblSearchMiddleName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(pnlSearchAccountInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlSearchAccountInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtSRCHlname)
-                                .addComponent(lblSearchLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lblSearchMobile, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtSRCHmobile)
-                                .addComponent(lblSearchDivision, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtSRCHdivision, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                                .addComponent(lblSearchState, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtSRCHstate)
-                                .addComponent(txtSRCHaccountNo))
-                            .addComponent(lblSearchAccountNo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(56, 56, 56))
+                                .addComponent(txtSRCHBalance, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                                .addComponent(txtSRCHaadhar)
+                                .addComponent(txtSRCHdistrict)
+                                .addComponent(txtSRCHemail)
+                                .addComponent(lblSearchEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtSRCHdob)
+                                .addComponent(txtSRCHfname)
+                                .addComponent(txtSRCHaddress)
+                                .addComponent(lblSearchAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblSearchDistrict, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblSearchBalance, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblSearchFirstName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblSearchDOB, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblSearchAadhar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 144, Short.MAX_VALUE)
+                        .addGroup(pnlSearchAccountInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlSearchAccountInformationLayout.createSequentialGroup()
+                                .addGroup(pnlSearchAccountInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnlSearchAccountInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(txtSRCHopeningDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                                        .addComponent(txtSRCHmname, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblSearchGender, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtSRCHgender, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txtSRCHcity, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblSearchCity, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblSearchPinCode, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtSRCHpincode, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txtSRCHaccountType, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addComponent(lblSearchMiddleName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 145, Short.MAX_VALUE)
+                                .addGroup(pnlSearchAccountInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnlSearchAccountInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtSRCHlname)
+                                        .addComponent(lblSearchLastName, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblSearchMobile, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtSRCHmobile)
+                                        .addComponent(lblSearchDivision, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtSRCHdivision, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                                        .addComponent(lblSearchState, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtSRCHstate)
+                                        .addComponent(txtSRCHaccountNo))
+                                    .addComponent(lblSearchAccountNo, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(56, 56, 56))
+                            .addGroup(pnlSearchAccountInformationLayout.createSequentialGroup()
+                                .addComponent(lblSearchOpeningDate, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(pnlSearchAccountInformationLayout.createSequentialGroup()
-                        .addComponent(lblSearchOpeningDate, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(175, 175, 175)
+                        .addComponent(lblSRCHphoto, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(210, 210, 210)
+                        .addComponent(lblSRCHSign, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
             .addGroup(pnlSearchAccountInformationLayout.createSequentialGroup()
-                .addGap(400, 400, 400)
+                .addGap(437, 437, 437)
                 .addComponent(btnOKaccountDETAIL, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -1716,13 +1732,21 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(pnlSearchAccountInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblSearchBalance)
                     .addComponent(lblSearchOpeningDate))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlSearchAccountInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtSRCHBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtSRCHopeningDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addGroup(pnlSearchAccountInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlSearchAccountInformationLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnlSearchAccountInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtSRCHBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtSRCHopeningDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSearchAccountInformationLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+                        .addGroup(pnlSearchAccountInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblSRCHSign, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblSRCHphoto, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(50, 50, 50)))
                 .addComponent(btnOKaccountDETAIL)
-                .addGap(44, 44, 44))
+                .addGap(35, 35, 35))
         );
 
         javax.swing.GroupLayout pnlSearchAccountLayout = new javax.swing.GroupLayout(pnlSearchAccount);
@@ -1745,7 +1769,7 @@ public class Dashboard extends javax.swing.JFrame {
                         .addComponent(btnSearchINFORMATIONreset)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSearchAccountLayout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
+                .addContainerGap(21, Short.MAX_VALUE)
                 .addGroup(pnlSearchAccountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(pnlFORAccountDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1770,7 +1794,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addComponent(pnlSearchAccountInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(256, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         tabCustomAccountManage.addTab("SEARCH ACCOUNT", pnlSearchAccount);
@@ -2169,7 +2193,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(pnlUpdateKYCdataENTER, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(268, Short.MAX_VALUE))
+                .addContainerGap(227, Short.MAX_VALUE))
         );
 
         tabCustomAccountManage.addTab("UPDATE KYC", pnlUpdateKYC);
@@ -2492,7 +2516,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(pnlCloseAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCloseBalance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtCloseOpeningDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 272, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 231, Short.MAX_VALUE)
                 .addGroup(pnlCloseAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCloseAccount)
                     .addComponent(btnCloseAccountCancel))
@@ -2548,7 +2572,6 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         tabCustomAccountManage.addTab("CLOSE ACCOUNT", pnlCloseAccount);
-        tabCustomAccountManage.addTab("tab5", jFileChooser1);
 
         javax.swing.GroupLayout pnlAccountMainLayout = new javax.swing.GroupLayout(pnlAccountMain);
         pnlAccountMain.setLayout(pnlAccountMainLayout);
@@ -2565,11 +2588,11 @@ public class Dashboard extends javax.swing.JFrame {
             pnlAccountMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlAccountMainLayout.createSequentialGroup()
                 .addComponent(pnlAccountManage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(pnlAccountMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tabCustomAccountManage, javax.swing.GroupLayout.PREFERRED_SIZE, 1141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 83, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addGroup(pnlAccountMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tabCustomAccountManage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         scrollpaneAccountMain.setViewportView(pnlAccountMain);
@@ -4245,11 +4268,43 @@ public class Dashboard extends javax.swing.JFrame {
             };
 
             setTextOptimizeCode(resultSet, textField);
+            
+             
+            ResultSet resultSetImage = GlobalDatabase.selectQuery("SELECT * FROM accountimage WHERE accountno = '"+ accountNo +"'");
+            
+
+            try {
+                
+                if (resultSetImage.next()) {
+                    System.out.println("Account No : " + resultSetImage.getString(1));
+                    
+                    BLOB imageData =  (BLOB) resultSetImage.getBlob("CUSTOMER_IMAGE");
+                    byte[] imageByte = imageData.getBytes(0, (int) imageData.length());
+
+                    // Use try-with-resources to ensure the stream is closed properly
+                    try (ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(imageByte)) {
+                        BufferedImage bufferedImage = ImageIO.read(byteArrayInputStream);
+                        lblSRCHphoto.setIcon(new ImageIcon(bufferedImage)); // Make sure ImageIcon is used correctly
+                    } catch (IOException e) {
+                        // Handle IOException for image reading
+                        System.out.println("Error reading the image: " + e.getMessage());
+                        Logger.getLogger(getClass().getName()).log(Level.SEVERE, null, e);
+                    }
+                }
+            } catch (SQLException ex) {
+                System.out.println("Image not found in Account ... Table" + ex.getMessage());
+                Logger.getLogger(CloseAccount.class.getName()).log(Level.SEVERE, null, ex);
+            }             
         }else{
             JOptionPane.showMessageDialog(null, "Account Not Found .... !!!" );
         }
     }//GEN-LAST:event_btnSearchINFORMATIONActionPerformed
 
+      private String toString(Blob blob) {
+          System.out.println("Problem to Show Image");
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
     private void btnCreateAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAccountActionPerformed
 
         String balance = txtBalance.getText().trim();
@@ -4257,10 +4312,18 @@ public class Dashboard extends javax.swing.JFrame {
 //      boolean balanceValidation = new OpenAccount().initialBalance(openAccountModel, balance, txtBalance);
 
         boolean balanceValidation = openAccountModel.setBalance(balance, txtBalance);
-        
+                
         if(balanceValidation ){
             
-                    //Openning date of Account convert in string format
+            String message = "The Indian Bank ... !!! \n Sending OTP for Open Account \n CODE : ";
+            String generatedOTP = new SendOTP().SendOTPFunctionality(message);
+            
+            String userInputOTP = JOptionPane.showInputDialog(null, "Please Enter OTP :", "Input Dialog", JOptionPane.QUESTION_MESSAGE);
+
+        
+            if (userInputOTP != null && userInputOTP.equals(generatedOTP)) {
+                
+                 //Openning date of Account convert in string format
                     Date date = new Date();
                     SimpleDateFormat simpleDateFormat= new SimpleDateFormat("dd-MM-YYYY");
                     String formatedDate = simpleDateFormat.format(date);
@@ -4299,25 +4362,23 @@ public class Dashboard extends javax.swing.JFrame {
 
                         pnlInitialBalance.setVisible(false);
                         pnlAccountInformation.setVisible(false);
-                        
+                        pnlImageUpload.setVisible(false); 
                         resetPersonalInfoCode();
 
-                    }
-                    else{
-                        //JOptionPane.showMessageDialog(null, "Please enter all requird fields .... !!!");
-                        JOptionPane.showMessageDialog(null, "Enter MINIMUM 1000Rs. To Open Account \n \t\t\t OR \n Enter Valid Amount ... !!!");
-                    }
-                   // openAccountModel = null ;
+            } else {
+                JOptionPane.showMessageDialog(null, "Please enter Valid OTP");
+            }   
+        }
+        else{
+            //JOptionPane.showMessageDialog(null, "Please enter all requird fields .... !!!");
+            JOptionPane.showMessageDialog(null, "Enter MINIMUM 1000Rs. To Open Account \n \t\t\t OR \n Enter Valid Amount ... !!!");
+        }
+               
                     
-                    GlobalDatabase.closeConnection();
+        GlobalDatabase.closeConnection();
             
         
-       }
-        //else{      
-//            JOptionPane.showMessageDialog(null, "Enter MINIMUM 1000Rs. To Open Account \n \t\t\t OR \n Enter Valid Amount ... !!!");
-//        }
-            
-        
+       }            
         
     }//GEN-LAST:event_btnCreateAccountActionPerformed
 
@@ -4329,11 +4390,12 @@ public class Dashboard extends javax.swing.JFrame {
 
         if(aadharVerification)
         {
-            pnlInitialBalance.setVisible(true);
+            //  pnlInitialBalance.setVisible(true);
+            pnlImageUpload.setVisible(true);
         }
         
-        txtBalance.requestFocus();
-        txtBalance.setText(" ");
+//        txtBalance.requestFocus();
+//        txtBalance.setText(" ");
     }//GEN-LAST:event_btnNextForIntialBalanceActionPerformed
 
     private void btnResetForPersonalInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetForPersonalInfoActionPerformed
@@ -4706,9 +4768,18 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void btnUploadImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUploadImageActionPerformed
         // TODO add your handling code here:
-        // ImageSave imageSave = 
-        new ImageSave("11234556600000", this.uploadPhotoPath, uploadSignPath);
-       
+        ImageSave imageSave = new ImageSave();
+        
+        boolean flag  = imageSave.ImageSaveFun(txtAccountNo.getText(), uploadPhotoPath, uploadSignPath);
+        
+        if(flag){
+            pnlInitialBalance.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(null, "Please Select Valid Image ... !!!");
+        }
+        
+        txtBalance.requestFocus();
+        txtBalance.setText("");
     }//GEN-LAST:event_btnUploadImageActionPerformed
     
     
@@ -4912,7 +4983,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton btnUpdateINFORMATIONreset;
     private javax.swing.JButton btnUpdateKYC;
     private javax.swing.JButton btnUploadImage;
-    private javax.swing.JButton btnUploadImageCancel;
     private javax.swing.JButton btnUploadPhoto;
     private javax.swing.JButton btnUploadSign;
     private javax.swing.JButton btnWithdrawAccountNo;
@@ -4922,7 +4992,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton btnWithdrawConfirmCancel;
     private javax.swing.JButton btnWithdrawSearchClear;
     private com.toedter.calendar.JDateChooser dateDOB;
-    private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -5090,6 +5159,8 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel lblReceiverSetAccountHolderName;
     private javax.swing.JLabel lblReceiverSetBalance;
     private javax.swing.JLabel lblReceiverSetMobileNo;
+    private javax.swing.JLabel lblSRCHSign;
+    private javax.swing.JLabel lblSRCHphoto;
     private javax.swing.JLabel lblSearchAadhar;
     private javax.swing.JLabel lblSearchAccountNo;
     private javax.swing.JLabel lblSearchAddress;
@@ -5283,6 +5354,8 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JTextField txtWithdrawAccountNumber;
     private javax.swing.JTextField txtWithdrawAmount;
     // End of variables declaration//GEN-END:variables
+
+  
 
     
 

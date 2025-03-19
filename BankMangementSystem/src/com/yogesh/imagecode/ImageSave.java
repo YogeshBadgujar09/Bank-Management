@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 public class ImageSave {
     
-    public ImageSave(String accountNo, String customerImagePath, String customerSignPath){
+    public boolean ImageSaveFun(String accountNo, String customerImagePath, String customerSignPath){
             
        GlobalDatabase.createConnection();
        
@@ -35,7 +35,7 @@ public class ImageSave {
             
             GlobalDatabase.nonSelectQueryForImage(accountNo, customerImageConvert, customerSignConvert);
             
-            
+            return true;
         } catch (FileNotFoundException ex) {
             Logger.getLogger(ImageSave.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
@@ -44,6 +44,7 @@ public class ImageSave {
        
        
        GlobalDatabase.closeConnection();
+       return false;
     }
     
     

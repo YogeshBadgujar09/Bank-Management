@@ -3,11 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Yogesh/Desktop/BankMangementSystem/BankMangementSystem/src/com/yogesh/dbandadmin/LoginAdmin.java</file>
+            <file>file:/C:/Users/Yogesh/Desktop/BankMangementSystem/BankMangementSystem/src/com/yogesh/openaccount/OpenAccountModel.java</file>
             <file>file:/C:/Users/Yogesh/Desktop/BankMangementSystem/BankMangementSystem/src/com/yogesh/frontend/Dashboard.java</file>
-            <file>file:/C:/Users/Yogesh/Desktop/BankMangementSystem/BankMangementSystem/src/com/yogesh/dbandadmin/GlobalDatabase.java</file>
-            <file>file:/C:/Users/Yogesh/Desktop/BankMangementSystem/BankMangementSystem/src/com/yogesh/frontend/AdminLogin.java</file>
-            <file>file:/C:/Users/Yogesh/Desktop/BankMangementSystem/BankMangementSystem/src/bankmangementsystem/BankMangementSystem.java</file>
+            <file>file:/C:/Users/Yogesh/Desktop/BankMangementSystem/BankMangementSystem/src/com/yogesh/otp/SendOTP.java</file>
         </group>
     </open-files>
 </project-private>
